@@ -14,22 +14,52 @@ class IMGPICKERViewController: UIViewController, UINavigationControllerDelegate,
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+      
     }
+  
+  var imagePicker: UIImagePickerController!
+  var imagesArray = [UIImage]()
 
+  @IBAction func takePhoto(sender: AnyObject) {
+    imagePicker = UIImagePickerController()
+    imagePicker.delegate = self
+    imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+    
+    presentViewController(imagePicker, animated: true, completion: nil)
+    
+  }
+  
+  func imagePickerController(picker: UIImagePickerController,
+    didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
+    
+      var pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage
+      
+      self.imagesArray.append(pickedImage!)
+      
+      print(imagesArray.count)
+      
+      self.dismissViewControllerAnimated(true, completion: nil)
+  }
+  
+
+  @IBAction func goAction(sender: AnyObject) {
+    performSegueWithIdentifier("gifPage", sender: nil)
+
+  }
+  
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+  
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+
+         let lastPage = segue.destinationViewController as! GifViewController
+         lastPage.imageArray = self.imagesArray
+      
     }
-    */
+  
 
 }
