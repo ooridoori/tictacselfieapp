@@ -256,29 +256,33 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
   }
 
   
-override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-      var announcement = ""
-      if sender != nil {
-        announcement = "Cat's game!!!!"
-      } else {
-        announcement = "the winner is \(currentPlayerMark)"
-      }
-      
-      let winnersPage = segue.destinationViewController as! WinnersPageViewController
-      
-      winnersPage.winnerLabel = announcement
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    var announcement = ""
+    println(sender)
   
-  // for every element gives you back a new array of values for the winner
-      var winnerPhotos:[UIImage?] = self.imagesArray.map{ $0[self.currentPlayerMark] }
-                                                    .filter({ $0 != nil })
-                              // fliter out all the nil elements out of the array
-
-
-      print(winnerPhotos)
-      winnersPage.winnerImages = winnerPhotos
+    if sender as? String == "" {
+      announcement = "Cat's game!!!"
+    } else {
+      announcement = "The winner is \(currentPlayerMark)!"
     }
+
+
     
+    let winnersPage = segue.destinationViewController as! WinnersPageViewController
+    
+    winnersPage.winnerLabel = announcement
+
+// for every element gives you back a new array of values for the winner
+    var winnerPhotos:[UIImage?] = self.imagesArray.map{ $0[self.currentPlayerMark] }
+                                                  .filter({ $0 != nil })
+                            // filter out all the nil elements out of the array
+
+
+    print(winnerPhotos)
+    winnersPage.winnerImages = winnerPhotos
   }
+    
+}
 
 
 
