@@ -15,7 +15,7 @@ class WinnersPageViewController: UIViewController {
   @IBOutlet var mainImageView: UIImageView!
   
   var winnerLabel: String?
-  var winnerImages = [UIImage]()
+  var winnerImages = [UIImage?]()
   var timer =  NSTimer()
   
 

@@ -230,6 +230,19 @@
                                     <action selector="tapButtonAction:" destination="iVd-Jw-Tpv" eventType="touchUpInside" id="FQ7-Cb-eTr"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="le7-tQ-aC6">
+                                <rect key="frame" x="89" y="437" width="197" height="21"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Get three in a row to win! ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.60888647708108556" green="0.94077493686868685" blue="0.86951354352609389" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -244,6 +257,7 @@
                         <outlet property="grid7" destination="xHz-9B-zM8" id="2yx-zU-eAV"/>
                         <outlet property="grid8" destination="cgz-y4-KB7" id="mdI-VH-PpZ"/>
                         <outlet property="grid9" destination="Xjc-lt-Elb" id="ruX-dP-HYK"/>
+                        <outlet property="playerStatus" destination="le7-tQ-aC6" id="VKs-ko-QzP"/>
                         <segue destination="BW3-gM-CN8" kind="show" identifier="winnerSegue" id="TNF-LN-ci6"/>
                     </connections>
                 </viewController>

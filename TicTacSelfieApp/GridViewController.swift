@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import AssetsLibrary
 import MobileCoreServices
 
 
@@ -24,6 +23,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet var grid8: UIButton!
     @IBOutlet var grid9: UIButton!
   
+  @IBOutlet var playerStatus: UILabel!
     
     override func viewDidLoad() {
       super.viewDidLoad()
@@ -31,7 +31,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
   
   var imagePicker: UIImagePickerController!
-  var imagesArray = [UIImage]()
+  var imagesArray = [[String: UIImage]]()
+  var winnerArray = [UIImage?]()
   
   
     override func didReceiveMemoryWarning() {
@@ -57,8 +58,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func alternatePlayers() {
       if turnCounter % 2 == 0 {
         self.currentPlayerMark = "x"
+        self.playerStatus.text = "It is O's turn"
       } else {
         self.currentPlayerMark = "o"
+        self.playerStatus.text = "It is X's turn"
       }
       
     }
@@ -175,7 +178,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
         print(self.imagesArray.count, "<- images Array count")
         
-        self.performSegueWithIdentifier("winnerSegue", sender: nil)
+        self.performSegueWithIdentifier("winnerSegue", sender: winner)
       }
 
     }
@@ -209,13 +212,34 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
   }
 
   func imagePickerController(picker: UIImagePickerController,
-  didFinishPickingMediaWithInfo info: [NSObject: AnyObject]){
-  
+    didFinishPickingMediaWithInfo info: [NSObject: AnyObject]){
+    
     
     var imageToSave = info[UIImagePickerControllerOriginalImage] as? UIImage
-    self.imagesArray.append(imageToSave!)
     
+    let imageData = UIImagePNGRepresentation(imageToSave)
+    let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
+    let imagePath = paths.stringByAppendingPathComponent("PlayerX.png")
+    
+    if !imageData.writeToFile(imagePath, atomically: false)
+    {
+      println("not saved")
+    } else {
+      println("saved")
+      NSUserDefaults.standardUserDefaults().setObject(imagePath, forKey: "imagePath")
+    }
+    
+    println(imagePath)
     //UIImageWriteToSavedPhotosAlbum(imageToSave,nil,nil,nil)
+//    self.imagesArray.append(imageToSave!)
+    var playerPhoto = [currentPlayerMark: imageToSave!]
+    self.imagesArray.append(playerPhoto)
+    println(self.imagesArray)
+      
+      
+//    and then append to an array...
+    
+  
     
 //    //---* SAVE THE IMAGES TO FILE *-----
 //    func getDocumentsDirectory() -> String {
@@ -243,7 +267,15 @@ override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
       let winnersPage = segue.destinationViewController as! WinnersPageViewController
       
       winnersPage.winnerLabel = announcement
-      winnersPage.winnerImages = self.imagesArray
+  
+  // for every element gives you back a new array of values for the winner
+      var winnerPhotos:[UIImage?] = self.imagesArray.map{ $0[self.currentPlayerMark] }
+                                                    .filter({ $0 != nil })
+                              // fliter out all the nil elements out of the array
+
+
+      print(winnerPhotos)
+      winnersPage.winnerImages = winnerPhotos
     }
     
   }
