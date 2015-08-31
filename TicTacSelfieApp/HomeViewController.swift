@@ -7,19 +7,22 @@
 //
 
 import UIKit
+import AVFoundation
 
 
-class CameraViewController: UIViewController,
-                            UINavigationControllerDelegate,
-                            UIImagePickerControllerDelegate {
+class CameraViewController: UIViewController{
+  
+  var audioPlayer = AVAudioPlayer()
     
     override func didReceiveMemoryWarning() {
       super.didReceiveMemoryWarning()
       // Dispose of any resources that can be recreated.
     }
     
-
+  @IBAction func playGameSound(sender: AnyObject) {
+   startNewGame()
     
+  }
     
     override func viewDidLoad() {
       super.viewDidLoad()

@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>49812A77-C9A3-432C-80C2-23B5AD9C3F40</string>
+	<string>79188D8D-67C8-434F-A1EC-843C80E84008</string>
 	<key>IDESourceControlProjectName</key>
 	<string>TicTacSelfieApp</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -14,11 +14,11 @@
 		<string>https://github.com/nancyk25/tictacselfieapp.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>TicTacSelfieApp.xcodeproj</string>
+	<string>TicTacSelfieApp.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>85DFAA5CBFC4314B2B9A1D73162A51147543ADFF</key>
-		<string>../..</string>
+		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/nancyk25/tictacselfieapp.git</string>

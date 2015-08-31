@@ -4,93 +4,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="fjs-ln-IIG">
-            <objects>
-                <viewController id="ru0-i6-qLt" customClass="IMGPICKERViewController" customModule="TicTacSelfieApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="BDR-7f-cif"/>
-                        <viewControllerLayoutGuide type="bottom" id="Var-yq-ppI"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="uOv-9a-Wns">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kkP-3R-Huh">
-                                <rect key="frame" x="145" y="80" width="55" height="30"/>
-                                <state key="normal" title="image 2">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="takePhoto:" destination="ru0-i6-qLt" eventType="touchUpInside" id="qyB-YL-HSn"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Zv-g4-7Bb">
-                                <rect key="frame" x="248" y="80" width="55" height="30"/>
-                                <state key="normal" title="image 3">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="takePhoto:" destination="ru0-i6-qLt" eventType="touchUpInside" id="6Ny-cI-Ith"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLY-Ef-5Bc">
-                                <rect key="frame" x="184" y="353" width="30" height="30"/>
-                                <state key="normal" title="GO">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="goAction:" destination="ru0-i6-qLt" eventType="touchUpInside" id="MIU-TO-OSa"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTM-O7-Hr0">
-                                <rect key="frame" x="42" y="80" width="55" height="30"/>
-                                <state key="normal" title="image 1">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="takePhoto:" destination="ru0-i6-qLt" eventType="touchUpInside" id="tNB-JH-bCP"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="0.85965290661577243" blue="0.78310074022399623" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
-                    <connections>
-                        <segue destination="vtb-uy-jz9" kind="showDetail" identifier="gifPage" id="ohb-pT-lVj"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1m2-11-C6S" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-900" y="-15"/>
-        </scene>
-        <!--Gif View Controller-->
-        <scene sceneID="lPv-pL-Qdx">
-            <objects>
-                <viewController id="vtb-uy-jz9" customClass="GifViewController" customModule="TicTacSelfieApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="8Hv-3O-sk5"/>
-                        <viewControllerLayoutGuide type="bottom" id="zT6-Sb-UdX"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="KXf-VH-3SU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nxl-FE-dWu">
-                                <rect key="frame" x="33" y="79" width="253" height="224"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.23281033245091587" green="0.68700691714413553" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
-                    <connections>
-                        <outlet property="testImage" destination="nxl-FE-dWu" id="ibo-XE-SsU"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Xdc-45-0Zr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-433" y="-15"/>
-        </scene>
         <!--Camera View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -115,6 +28,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="playGameSound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YOZ-gZ-Jez"/>
                                     <segue destination="iVd-Jw-Tpv" kind="show" id="LWZ-ab-tIy"/>
                                 </connections>
                             </button>
@@ -258,7 +172,7 @@
                         <outlet property="grid8" destination="cgz-y4-KB7" id="mdI-VH-PpZ"/>
                         <outlet property="grid9" destination="Xjc-lt-Elb" id="ruX-dP-HYK"/>
                         <outlet property="playerStatus" destination="le7-tQ-aC6" id="VKs-ko-QzP"/>
-                        <segue destination="BW3-gM-CN8" kind="show" identifier="winnerSegue" id="TNF-LN-ci6"/>
+                        <segue destination="BW3-gM-CN8" kind="presentation" identifier="winnerSegue" id="TNF-LN-ci6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RBB-k2-M7n" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -312,6 +226,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="LWZ-ab-tIy"/>
+        <segue reference="HQN-Vb-FnF"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import AVFoundation
+import SwiftGIF
+import ImageIO
+import MobileCoreServices
 import AssetsLibrary
 
 class WinnersPageViewController: UIViewController {
@@ -17,16 +21,47 @@ class WinnersPageViewController: UIViewController {
   var winnerLabel: String?
   var winnerImages = [UIImage?]()
   var timer =  NSTimer()
+  var audioPlayer = AVAudioPlayer()
+  
+  var gameResult = String()
+  
+  func callbackFunc(data: NSData, error: NSError){
+    print(data)
+  }
   
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+      if self.gameResult == "cat wins"{
+        catsGame()
+      } else {
+        winnerWinner()
+      }
+
+      
       self.label.text = self.winnerLabel
       self.mainImageView.contentMode = .ScaleAspectFit
       self.mainImageView.image = self.winnerImages[0]
       println(self.winnerLabel)
+      
+      let justImages:[UIImage] = self.winnerImages.map{ $0! }
+      
+      //------* SWIFTGIF: makes and stores gif into temp file *-------
+    
+      createGIF(with: justImages, repeatCount: 0, 0.3 ) { (gifData, err) -> () in
+        if err == nil {
+//          println(data)
+//          let gifImage = UIImage(data: gifData!)
+//          let gifImage = CFMutableDataRef(gifData!)
+
+//          CGImageDestinationCreateWithData(gifImage, kUTTypeGIF, self.winnerImages.count, nil)
+          
+//          UIImageWriteToSavedPhotosAlbum(gifImage,nil,nil,nil)
+
+        }
+      }
+
       
       
       // Sets a timer for every second and calls method changeImage
@@ -36,7 +71,9 @@ class WinnersPageViewController: UIViewController {
       // Do any additional setup after loading the view.
   }
   @IBAction func playAgain(sender: AnyObject) {
+    blop()
     self.timer.invalidate()
+
   }
   
   func animateImage () {

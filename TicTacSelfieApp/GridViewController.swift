@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import MobileCoreServices
+import AVFoundation
 
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -24,6 +24,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet var grid9: UIButton!
   
   @IBOutlet var playerStatus: UILabel!
+  
+  var audioPlayer = AVAudioPlayer()
     
     override func viewDidLoad() {
       super.viewDidLoad()
@@ -80,7 +82,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
       
       alternatePlayers()
       //get x or o
-      
+            
       button.setImage(whichImage(), forState: UIControlState.Normal)
       button.userInteractionEnabled = false
       
@@ -179,7 +181,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
   
     @IBAction func tapButtonAction(sender: UIButton) {
       useImagePicker()
-      
+      pressedButton()
       startTurn(sender)
     }
   
@@ -187,7 +189,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     imagePicker = UIImagePickerController()
     imagePicker.delegate = self
 
-//    imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
     var frontCam = UIImagePickerControllerCameraDevice.Front
     if UIImagePickerController.isCameraDeviceAvailable(frontCam) {
       imagePicker.sourceType = .Camera
@@ -223,28 +224,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     println(imagePath)
-    //UIImageWriteToSavedPhotosAlbum(imageToSave,nil,nil,nil)
-//    self.imagesArray.append(imageToSave!)
     var playerPhoto = [currentPlayerMark: imageToSave!]
     self.imagesArray.append(playerPhoto)
     println(self.imagesArray)
       
+//    UIImageWriteToSavedPhotosAlbum(imageToSave,nil,nil,nil)
+
       
-//    and then append to an array...
-    
-  
-    
-//    //---* SAVE THE IMAGES TO FILE *-----
-//    func getDocumentsDirectory() -> String {
-//      let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as! [String]
-//      let documentsDirectory = paths[0]
-//      return documentsDirectory
-//    }
-//    let imageName = NSUUID().UUIDString
-//    let imagePath = getDocumentsDirectory().stringByAppendingPathComponent(imageName)
-//    let jpegData = UIImageJPEGRepresentation(UIImage(), 80)
-//    jpegData.writeToFile(imagePath,atomically: true)
-  
     self.dismissViewControllerAnimated(true, completion: checkWinner )
       
   }
@@ -262,6 +248,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
       photos.append(UIImage(named:"cat3.jpeg") )
       
       announcement = "Cat's game!!!"
+      
     } else {
       
       
@@ -271,6 +258,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
       // filter out all the nil elements out of the array
 
       announcement = "The winner is \(currentPlayerMark)!"
+      
+      
+      
     }
 
 
@@ -281,6 +271,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     println("printing the photos: \(photos)")
 
     winnersPage.winnerImages = photos
+    
+    if isCatsGame(turnCounter){
+      winnersPage.gameResult = "cat wins"
+    } else {
+      winnersPage.gameResult = "player wins"
+    }
+    
   }
     
 }
