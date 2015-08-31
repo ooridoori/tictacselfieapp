@@ -82,6 +82,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
       //get x or o
       
       button.setImage(whichImage(), forState: UIControlState.Normal)
+      button.userInteractionEnabled = false
       
       ++turnCounter
       
