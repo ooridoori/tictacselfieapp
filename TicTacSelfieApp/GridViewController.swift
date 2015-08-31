@@ -31,7 +31,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
   
   var imagePicker: UIImagePickerController!
-  var imagesArray = [[String: UIImage]]()
+  var imagesArray = [ [String: UIImage] ]()
   var winnerArray = [UIImage?]()
   
   
@@ -45,7 +45,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     var rowCombos = ["","","","","","","","",""]
     var currentPlayerMark = "x"
   
-    func checkAllGridFilled(turnCount: Int) -> Bool {
+    func isCatsGame(turnCount: Int) -> Bool {
       if turnCount == 9 {
         print("game over!")
         return true
@@ -88,15 +88,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
       //saving the player's mark in our rowcombos array [x,o,o,x..]
       rowCombos[button.tag] = currentPlayerMark
       
-      if checkAllGridFilled(turnCounter) {
-        print("restarting")
-        
-        turnCounter = 0
-
-      }
-
     }
-    
+  
+  
   func checkWinner() {
     
       println(rowCombos)
@@ -172,18 +166,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         endGame = true
       }
     
-      //      if there's a winner ...'
-    
+      print(isCatsGame(turnCounter), "is all grid filled up???")
+
       if winner == "x" || winner == "o" {
-    
-        print(self.imagesArray.count, "<- images Array count")
-        
-        self.performSegueWithIdentifier("winnerSegue", sender: winner)
+        self.performSegueWithIdentifier("winnerSegue", sender: nil)
+      } else if isCatsGame(turnCounter) {
+        self.performSegueWithIdentifier("winnerSegue", sender: nil)
       }
 
     }
-    
-    
+  
     @IBAction func tapButtonAction(sender: UIButton) {
       useImagePicker()
       
@@ -252,34 +244,42 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 //    let jpegData = UIImageJPEGRepresentation(UIImage(), 80)
 //    jpegData.writeToFile(imagePath,atomically: true)
   
-    self.dismissViewControllerAnimated(true, completion: checkWinner)
+    self.dismissViewControllerAnimated(true, completion: checkWinner )
+      
   }
 
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     var announcement = ""
-    println(sender)
+    var photos = [UIImage?]()
+//    println("prepareForSegue got this sender:", sender)
   
-    if sender as? String == "" {
+    if isCatsGame(turnCounter) {
+    
+      photos.append(UIImage(named:"cat1.jpg") )
+      photos.append(UIImage(named:"cat2.jpg") )
+      photos.append(UIImage(named:"cat3.jpeg") )
+      
       announcement = "Cat's game!!!"
     } else {
+      
+      
+      // for every element gives you back a new array of values for the winner
+      photos = self.imagesArray.map{ $0[self.currentPlayerMark] }
+                               .filter({ $0 != nil })
+      // filter out all the nil elements out of the array
+
       announcement = "The winner is \(currentPlayerMark)!"
     }
 
 
-    
     let winnersPage = segue.destinationViewController as! WinnersPageViewController
     
     winnersPage.winnerLabel = announcement
+    
+    println("printing the photos: \(photos)")
 
-// for every element gives you back a new array of values for the winner
-    var winnerPhotos:[UIImage?] = self.imagesArray.map{ $0[self.currentPlayerMark] }
-                                                  .filter({ $0 != nil })
-                            // filter out all the nil elements out of the array
-
-
-    print(winnerPhotos)
-    winnersPage.winnerImages = winnerPhotos
+    winnersPage.winnerImages = photos
   }
     
 }
