@@ -28,7 +28,7 @@ private func createErrorFromString(string: String, code: Int = -1) -> NSError {
 public func createGIF(with images: [UIImage],
   repeatCount: Int = 0,
   frameDelay: Double,
-  callback: (data: NSData?, error: NSError?) -> ()) {
+  callback: (data: NSData?, error: NSError?, url: NSURL?) -> ()) {
     
     let fileProperties = [kCGImagePropertyGIFDictionary as String: [kCGImagePropertyGIFLoopCount as String: repeatCount]]
     let frameProperties = [kCGImagePropertyGIFDictionary as String: [kCGImagePropertyGIFDelayTime as String: frameDelay]]
@@ -49,11 +49,13 @@ public func createGIF(with images: [UIImage],
         println(url)
       
         if CGImageDestinationFinalize(destination) {
-            callback(data: NSData(contentsOfURL: url), error: nil)
+            callback(data: NSData(contentsOfURL: url), error: nil, url: url)
         } else {
-            callback(data: nil, error: createErrorFromString("Couldn't create the final image"))
+            callback(data: nil, error: createErrorFromString("Couldn't create the final image"), url: url)
         }
     } else  {
-        callback(data: nil, error: createErrorFromString("There's something wrong with the document directory", code: 1))
+      callback(data: nil,
+               error: createErrorFromString("There's something wrong with the document directory", code: 1),
+               url: nil)
     }
 }

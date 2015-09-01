@@ -216,6 +216,9 @@
                                 <state key="normal" title="Share with friends!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="shareOnTwitter:" destination="BW3-gM-CN8" eventType="touchUpInside" id="eRa-de-S9G"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.67748848842752396" blue="0.88797330884725212" alpha="1" colorSpace="calibratedRGB"/>

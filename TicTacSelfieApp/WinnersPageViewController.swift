@@ -25,27 +25,23 @@ class WinnersPageViewController: UIViewController {
   var audioPlayer = AVAudioPlayer()
   
   var gameResult = String()
+  var imageData = NSData()
   
   
+  
+  
+  @IBAction func shareOnTwitter(sender: AnyObject) {
+  
+    var textToShare = "I just won TicTacSelfie! 😜"
+    
+    var objectsToShare = [textToShare,self.imageData]
+    
+    let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+    
+    self.presentViewController(activityVC, animated: true, completion: nil)
 
-//  func tweet() {
-//    
-//    if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter){
-//      var twController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
-//      twController.setInitialText("I just won TicTacSelfie!😜")
-//      twController.addImage(image:UIImage)
-//      
-//    self.presentViewController(twController, animated: true, completion: nil)
-//    } else {
-//      var alert = UIAlertController(title: "Account", message: "Please log-in to Facebook", preferredStyle: UIAlertControllerStyle.Alert)
-//      
-//      alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-//      
-//      self.presentViewController(alert, animated: true, completion: nil)
-//      
-//    }
-//    
-//  }
+    
+  }
   
   
   
@@ -69,17 +65,16 @@ class WinnersPageViewController: UIViewController {
       
       //------* SWIFTGIF: makes and stores gif into temp file *-------
     
-      createGIF(with: justImages, repeatCount: 0, 0.3 ) { (gifData, err) -> () in
+      createGIF(with: justImages, repeatCount: 0, 0.3 ) { (gifData, err, url) -> () in
         if err == nil {
-          println(gifData)
-//          let gifImage = UIImage(data: gifData!)
-//          let gifImage = CFMutableDataRef(gifData!)
-//
-//          CGImageDestinationCreateWithData(gifImage, kUTTypeGIF, self.winnerImages.count, nil)
-//          
-//          UIImageWriteToSavedPhotosAlbum(gifImage,nil,nil,nil)
+          println("createGIF callback, url")
+          println(url)
+          
+            self.imageData = NSData(contentsOfURL: url!)!
+          
 
         }
+        
         
       }
 
