@@ -211,6 +211,12 @@
                                     <segue destination="iVd-Jw-Tpv" kind="show" id="HQN-Vb-FnF"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pc0-fm-FnP">
+                                <rect key="frame" x="116" y="374" width="128" height="30"/>
+                                <state key="normal" title="Share with friends!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.67748848842752396" blue="0.88797330884725212" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -222,7 +228,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IAd-Hl-FCF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1349.5" y="275.5"/>
+            <point key="canvasLocation" x="1284.5" y="275.5"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

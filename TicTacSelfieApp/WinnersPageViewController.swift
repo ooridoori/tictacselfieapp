@@ -12,6 +12,7 @@ import SwiftGIF
 import ImageIO
 import MobileCoreServices
 import AssetsLibrary
+import Social
 
 class WinnersPageViewController: UIViewController {
   
@@ -25,9 +26,28 @@ class WinnersPageViewController: UIViewController {
   
   var gameResult = String()
   
-  func callbackFunc(data: NSData, error: NSError){
-    print(data)
-  }
+  
+
+//  func tweet() {
+//    
+//    if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter){
+//      var twController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+//      twController.setInitialText("I just won TicTacSelfie!😜")
+//      twController.addImage(image:UIImage)
+//      
+//    self.presentViewController(twController, animated: true, completion: nil)
+//    } else {
+//      var alert = UIAlertController(title: "Account", message: "Please log-in to Facebook", preferredStyle: UIAlertControllerStyle.Alert)
+//      
+//      alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+//      
+//      self.presentViewController(alert, animated: true, completion: nil)
+//      
+//    }
+//    
+//  }
+  
+  
   
 
     override func viewDidLoad() {
@@ -51,15 +71,16 @@ class WinnersPageViewController: UIViewController {
     
       createGIF(with: justImages, repeatCount: 0, 0.3 ) { (gifData, err) -> () in
         if err == nil {
-//          println(data)
+          println(gifData)
 //          let gifImage = UIImage(data: gifData!)
 //          let gifImage = CFMutableDataRef(gifData!)
-
+//
 //          CGImageDestinationCreateWithData(gifImage, kUTTypeGIF, self.winnerImages.count, nil)
-          
+//          
 //          UIImageWriteToSavedPhotosAlbum(gifImage,nil,nil,nil)
 
         }
+        
       }
 
       
