@@ -7,24 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0EE60B4B97E90ED4AF230A1F748D82EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4C027EB39C852A9C59B582B505F02D /* Foundation.framework */; };
 		109F7451F9619CD59378D1A9828AB958 /* Pods-TicTacSelfieApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BF26C159A740F536A71AEC354E249CBF /* Pods-TicTacSelfieApp-dummy.m */; };
-		2884399B08228073E264D06CECFCA534 /* GifWriter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8417CDB88DC21D204547AA87D2A02B4F /* GifWriter-dummy.m */; };
-		2F1728CDC724F7110BED46D94EB0EF65 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040B45DA7D1E10ED66B47D8007B669CB /* UIKit.framework */; };
-		3389631D49F9AD8D571B2E9A8220DEA7 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B248662F9D21FFCD6D393CC1B9B66D8F /* ImageIO.framework */; };
-		51775DDA45BAC11D04EC8BE03CCC53B9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040B45DA7D1E10ED66B47D8007B669CB /* UIKit.framework */; };
 		532FA22DD2D2A3579813DC62A5AC526C /* Pods-TicTacSelfieApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B4FE42D473BE21EA75B6A3F0E880A5B5 /* Pods-TicTacSelfieApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		56A0A243F04918AE8738F0B02EC3B340 /* SwiftGIF-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 50EEB6BFE4B99677AC37AC538BC0E819 /* SwiftGIF-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		58B342C8E916FB264FA7BDE499B2806B /* GIFWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EEBA594A2541D311F96248B850B812 /* GIFWriter.swift */; };
-		677DA19FF6C19F9DD118412B0F99C590 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A52EC5EFA0BDB0BE08A19F6343445745 /* MobileCoreServices.framework */; };
-		67AAE0C6C5AB7037F29065FF83310405 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A52EC5EFA0BDB0BE08A19F6343445745 /* MobileCoreServices.framework */; };
 		AD6BD9BEE5E371C00C7ADC3C1081064B /* SwiftGIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333DC939806FE0431B7BC0DF2A7EC218 /* SwiftGIF.swift */; };
-		AE0D7F1AC65F985BF3A0221E2BDFE544 /* GifWriter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 066332C1A67DF656F60449893140765A /* GifWriter-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B097A2412882701C59007537E73BEF8B /* SwiftGIF-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C14060C18F25204D5D94BEADB67FDAD9 /* SwiftGIF-dummy.m */; };
-		CC9A9316358301C68951D54008B5E0EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4C027EB39C852A9C59B582B505F02D /* Foundation.framework */; };
 		D0859819871E7BE06755A98F253F6B5F /* SwiftGIF.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 959772FD4E5D7952F224885C2800FB75 /* SwiftGIF.bundle */; };
-		D7BF3020B278977AD403A5579D929EA1 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B248662F9D21FFCD6D393CC1B9B66D8F /* ImageIO.framework */; };
-		D7E69970A09BA6DC9DD654B735B49490 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4C027EB39C852A9C59B582B505F02D /* Foundation.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,36 +40,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03D47B6C9C2A8C7B81E95F9D5E27C28B /* GifWriter.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = GifWriter.modulemap; sourceTree = "<group>"; };
-		040B45DA7D1E10ED66B47D8007B669CB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		066332C1A67DF656F60449893140765A /* GifWriter-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GifWriter-umbrella.h"; sourceTree = "<group>"; };
 		13B334BB52B5346C90A6503EB486FBAE /* Pods-TicTacSelfieApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TicTacSelfieApp-acknowledgements.plist"; sourceTree = "<group>"; };
 		152F6ABB05E6037F4891DEE416D02668 /* SwiftGIF-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftGIF-prefix.pch"; sourceTree = "<group>"; };
 		1C2552DFEC61C283B2EE61B52C7A12F2 /* Pods-TicTacSelfieApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TicTacSelfieApp-resources.sh"; sourceTree = "<group>"; };
-		23EEBA594A2541D311F96248B850B812 /* GIFWriter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GIFWriter.swift; path = GifWriter/Source/GIFWriter.swift; sourceTree = "<group>"; };
 		333DC939806FE0431B7BC0DF2A7EC218 /* SwiftGIF.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftGIF.swift; path = Pod/Classes/SwiftGIF.swift; sourceTree = "<group>"; };
 		3BDB3E3CD0C8B7194119692B36A1DE24 /* Pods-TicTacSelfieApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TicTacSelfieApp.release.xcconfig"; sourceTree = "<group>"; };
 		408A17F4321B339CBA8DAF7599F7E474 /* SwiftGIF.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftGIF.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E2B02B57F9D7B50BABE69A8365D57E8 /* Pods-TicTacSelfieApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TicTacSelfieApp.debug.xcconfig"; sourceTree = "<group>"; };
-		4E4C027EB39C852A9C59B582B505F02D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		50EEB6BFE4B99677AC37AC538BC0E819 /* SwiftGIF-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftGIF-umbrella.h"; sourceTree = "<group>"; };
 		52D2B44999F2D3A18500C2AC077195A9 /* SwiftGIF.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftGIF.modulemap; sourceTree = "<group>"; };
-		540E7FAEBCB197EC2219182C8132537D /* GifWriter-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "GifWriter-Private.xcconfig"; sourceTree = "<group>"; };
 		5F4AE64829DA5BF411B8DC513BE6A7E3 /* SwiftGIF.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftGIF.xcconfig; sourceTree = "<group>"; };
-		729C820223A969FF2B7CFAA1E5BE91E8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		734E1CAB1BF07457FB0162E639CE99B3 /* Pods-TicTacSelfieApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TicTacSelfieApp.modulemap"; sourceTree = "<group>"; };
 		7748A387E31F61F5FE3FECD49660DD31 /* Pods_TicTacSelfieApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TicTacSelfieApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77F47F7B0A1265BB30913930FC0069AE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8417CDB88DC21D204547AA87D2A02B4F /* GifWriter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GifWriter-dummy.m"; sourceTree = "<group>"; };
 		9501100D0A3A3B61C49C6C51F0E354C4 /* Pods-TicTacSelfieApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TicTacSelfieApp-frameworks.sh"; sourceTree = "<group>"; };
 		959772FD4E5D7952F224885C2800FB75 /* SwiftGIF.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftGIF.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		962A2C15636A5CAE094C7D4A7D0BEC9F /* Pods-TicTacSelfieApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TicTacSelfieApp-acknowledgements.markdown"; sourceTree = "<group>"; };
-		A52EC5EFA0BDB0BE08A19F6343445745 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
 		A53A4215AF6657817301ADF98A1CD4CD /* SwiftGIF-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SwiftGIF-Private.xcconfig"; sourceTree = "<group>"; };
-		A8ADDBE390AE5E34CC3E7035B282917D /* GifWriter-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GifWriter-prefix.pch"; sourceTree = "<group>"; };
-		B248662F9D21FFCD6D393CC1B9B66D8F /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
 		B4FE42D473BE21EA75B6A3F0E880A5B5 /* Pods-TicTacSelfieApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TicTacSelfieApp-umbrella.h"; sourceTree = "<group>"; };
-		B880AA87F5E4745883BA25A32815E8A9 /* GifWriter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GifWriter.xcconfig; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BF26C159A740F536A71AEC354E249CBF /* Pods-TicTacSelfieApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TicTacSelfieApp-dummy.m"; sourceTree = "<group>"; };
 		C14060C18F25204D5D94BEADB67FDAD9 /* SwiftGIF-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftGIF-dummy.m"; sourceTree = "<group>"; };
@@ -101,10 +77,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC9A9316358301C68951D54008B5E0EF /* Foundation.framework in Frameworks */,
-				D7BF3020B278977AD403A5579D929EA1 /* ImageIO.framework in Frameworks */,
-				677DA19FF6C19F9DD118412B0F99C590 /* MobileCoreServices.framework in Frameworks */,
-				51775DDA45BAC11D04EC8BE03CCC53B9 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,10 +84,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7E69970A09BA6DC9DD654B735B49490 /* Foundation.framework in Frameworks */,
-				3389631D49F9AD8D571B2E9A8220DEA7 /* ImageIO.framework in Frameworks */,
-				67AAE0C6C5AB7037F29065FF83310405 /* MobileCoreServices.framework in Frameworks */,
-				2F1728CDC724F7110BED46D94EB0EF65 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,7 +91,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EE60B4B97E90ED4AF230A1F748D82EF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,15 +103,6 @@
 				EFAD2055552D2AD30FB7664412E47E6E /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		230FC8B9BDCD25DDA56E93FE532ACBCF /* GifWriter */ = {
-			isa = PBXGroup;
-			children = (
-				23EEBA594A2541D311F96248B850B812 /* GIFWriter.swift */,
-				FDECFB3AD0C99DCCA3D2881DFC56E4F1 /* Support Files */,
-			);
-			path = GifWriter;
 			sourceTree = "<group>";
 		};
 		3DD89E8CA9BE5EC108276D7843D24CF2 /* SwiftGIF */ = {
@@ -170,7 +128,6 @@
 		81F26828914F7FEE234996FBA8C15CA2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				230FC8B9BDCD25DDA56E93FE532ACBCF /* GifWriter */,
 				3DD89E8CA9BE5EC108276D7843D24CF2 /* SwiftGIF */,
 			);
 			name = Pods;
@@ -231,27 +188,8 @@
 		EFAD2055552D2AD30FB7664412E47E6E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				4E4C027EB39C852A9C59B582B505F02D /* Foundation.framework */,
-				B248662F9D21FFCD6D393CC1B9B66D8F /* ImageIO.framework */,
-				A52EC5EFA0BDB0BE08A19F6343445745 /* MobileCoreServices.framework */,
-				040B45DA7D1E10ED66B47D8007B669CB /* UIKit.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		FDECFB3AD0C99DCCA3D2881DFC56E4F1 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				03D47B6C9C2A8C7B81E95F9D5E27C28B /* GifWriter.modulemap */,
-				B880AA87F5E4745883BA25A32815E8A9 /* GifWriter.xcconfig */,
-				540E7FAEBCB197EC2219182C8132537D /* GifWriter-Private.xcconfig */,
-				8417CDB88DC21D204547AA87D2A02B4F /* GifWriter-dummy.m */,
-				A8ADDBE390AE5E34CC3E7035B282917D /* GifWriter-prefix.pch */,
-				066332C1A67DF656F60449893140765A /* GifWriter-umbrella.h */,
-				729C820223A969FF2B7CFAA1E5BE91E8 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/GifWriter";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,7 +215,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE0D7F1AC65F985BF3A0221E2BDFE544 /* GifWriter-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,8 +369,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58B342C8E916FB264FA7BDE499B2806B /* GIFWriter.swift in Sources */,
-				2884399B08228073E264D06CECFCA534 /* GifWriter-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,7 +550,6 @@
 		};
 		AA35EDD46CCA8D36B4BBF7C639B16353 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 540E7FAEBCB197EC2219182C8132537D /* GifWriter-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1.0.0;
@@ -672,7 +606,6 @@
 		};
 		CDE0B49BD844290DDB92EA059B4D1FA5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 540E7FAEBCB197EC2219182C8132537D /* GifWriter-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1.0.0;

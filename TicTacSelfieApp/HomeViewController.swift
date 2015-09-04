@@ -30,5 +30,3 @@ class CameraViewController: UIViewController{
     
   }
 
-
-   

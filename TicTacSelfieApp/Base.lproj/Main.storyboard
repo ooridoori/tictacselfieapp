@@ -2,7 +2,20 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Brandon_med.otf">
+            <string>BrandonGrotesque-Medium</string>
+            <string>BrandonGrotesque-Medium</string>
+            <string>BrandonGrotesque-Medium</string>
+            <string>BrandonGrotesque-Medium</string>
+            <string>BrandonGrotesque-Medium</string>
+        </mutableArray>
+        <mutableArray key="Frontage-3D.otf">
+            <string>Frontage-3D</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Camera View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -16,15 +29,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pass and play with another person.  Wait for the surprise!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMI-SN-B5O">
-                                <rect key="frame" x="-19" y="296" width="434" height="41"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFT-9k-5ny">
-                                <rect key="frame" x="136" y="353" width="79" height="30"/>
-                                <state key="normal" title="Play Game!">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFT-9k-5ny">
+                                <rect key="frame" x="114" y="452" width="132" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="JXH-MI-c7S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BrandonGrotesque-Medium" family="Brandon Grotesque" pointSize="18"/>
+                                <state key="normal" title="PLAY GAME!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -32,8 +43,32 @@
                                     <segue destination="iVd-Jw-Tpv" kind="show" id="LWZ-ab-tIy"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PASS AND PLAY!  WINNER GETS A SURPRISE." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tjq-hi-jaB">
+                                <rect key="frame" x="52" y="377" width="257" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="p9n-TN-kee"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BrandonGrotesque-Medium" family="Brandon Grotesque" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tictaclogo" translatesAutoresizingMaskIntoConstraints="NO" id="jtk-26-p2t">
+                                <rect key="frame" x="18" y="71" width="337" height="305"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.75087858860053081" green="1" blue="0.61983236415043863" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Tjq-hi-jaB" firstAttribute="centerX" secondItem="jFT-9k-5ny" secondAttribute="centerX" id="1v4-JQ-D3L"/>
+                            <constraint firstItem="jtk-26-p2t" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="2" id="5h3-xn-BHW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jFT-9k-5ny" secondAttribute="bottom" constant="180" id="7fc-UO-CHg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Tjq-hi-jaB" secondAttribute="trailing" constant="50" id="A1r-Qn-lIc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jtk-26-p2t" secondAttribute="trailing" constant="4" id="FNg-P4-kJL"/>
+                            <constraint firstItem="Tjq-hi-jaB" firstAttribute="top" secondItem="jtk-26-p2t" secondAttribute="bottom" constant="1" id="Hbm-iU-QHQ"/>
+                            <constraint firstItem="Tjq-hi-jaB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="36" id="Ld5-1T-Seu"/>
+                            <constraint firstItem="jtk-26-p2t" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="51" id="NiA-hX-UGi"/>
+                            <constraint firstItem="jFT-9k-5ny" firstAttribute="top" secondItem="Tjq-hi-jaB" secondAttribute="bottom" constant="13" id="Yt0-cs-Q77"/>
+                            <constraint firstItem="jFT-9k-5ny" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="98" id="wyE-oq-yiH"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
@@ -53,80 +88,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T0X-Qi-PjT">
-                                <rect key="frame" x="235" y="196" width="100" height="100"/>
-                                <color key="backgroundColor" red="0.68812084389999995" green="0.4277767274" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="tapButtonAction:" destination="iVd-Jw-Tpv" eventType="touchUpInside" id="bID-91-PSC"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgz-y4-KB7">
-                                <rect key="frame" x="127" y="304" width="100" height="100"/>
-                                <color key="backgroundColor" red="0.68812084389999995" green="0.4277767274" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <gestureRecognizers/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="tapButtonAction:" destination="iVd-Jw-Tpv" eventType="touchUpInside" id="NDC-ZS-qvR"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xjc-lt-Elb">
-                                <rect key="frame" x="235" y="304" width="100" height="100"/>
-                                <color key="backgroundColor" red="0.68812084389999995" green="0.4277767274" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="tapButtonAction:" destination="iVd-Jw-Tpv" eventType="touchUpInside" id="pZb-ts-9PF"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ugp-fT-yFO">
-                                <rect key="frame" x="235" y="88" width="100" height="100"/>
-                                <color key="backgroundColor" red="0.68812084389999995" green="0.4277767274" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="tapButtonAction:" destination="iVd-Jw-Tpv" eventType="touchUpInside" id="FEk-ol-has"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkd-lH-VZR">
-                                <rect key="frame" x="19" y="196" width="100" height="100"/>
-                                <color key="backgroundColor" red="0.68812084389999995" green="0.4277767274" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="tapButtonAction:" destination="iVd-Jw-Tpv" eventType="touchUpInside" id="MMu-pZ-hfO"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gRE-mH-I6Y">
-                                <rect key="frame" x="127" y="88" width="100" height="100"/>
-                                <color key="backgroundColor" red="0.68812084389999995" green="0.4277767274" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="tapButtonAction:" destination="iVd-Jw-Tpv" eventType="touchUpInside" id="Tw0-lD-U1s"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xHz-9B-zM8">
-                                <rect key="frame" x="19" y="304" width="100" height="100"/>
-                                <color key="backgroundColor" red="0.68812084389999995" green="0.4277767274" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="tapButtonAction:" destination="iVd-Jw-Tpv" eventType="touchUpInside" id="JG1-tC-vja"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54q-P4-5Ca">
-                                <rect key="frame" x="19" y="88" width="100" height="100"/>
-                                <color key="backgroundColor" red="0.68812084389999995" green="0.4277767274" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="field" translatesAutoresizingMaskIntoConstraints="NO" id="Dwj-7P-4a0">
+                                <rect key="frame" x="20" y="50" width="334" height="522"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="272" placeholderIntrinsicHeight="29" text="GET THREE IN A ROW TO WIN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="le7-tQ-aC6">
+                                <rect key="frame" x="44" y="91" width="290" height="40"/>
+                                <fontDescription key="fontDescription" name="BrandonGrotesque-Medium" family="Brandon Grotesque" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54q-P4-5Ca">
+                                <rect key="frame" x="31" y="168" width="95" height="93"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -134,9 +108,32 @@
                                     <action selector="tapButtonAction:" destination="iVd-Jw-Tpv" eventType="touchUpInside" id="Ztu-st-lsl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4a-TB-KnP">
-                                <rect key="frame" x="127" y="196" width="100" height="100"/>
-                                <color key="backgroundColor" red="0.68812084389999995" green="0.4277767274" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gRE-mH-I6Y">
+                                <rect key="frame" x="141" y="168" width="89" height="89"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapButtonAction:" destination="iVd-Jw-Tpv" eventType="touchUpInside" id="Tw0-lD-U1s"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkd-lH-VZR">
+                                <rect key="frame" x="31" y="274" width="100" height="91"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapButtonAction:" destination="iVd-Jw-Tpv" eventType="touchUpInside" id="MMu-pZ-hfO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4a-TB-KnP">
+                                <rect key="frame" x="139" y="275" width="97" height="90"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -144,21 +141,64 @@
                                     <action selector="tapButtonAction:" destination="iVd-Jw-Tpv" eventType="touchUpInside" id="FQ7-Cb-eTr"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="le7-tQ-aC6">
-                                <rect key="frame" x="89" y="437" width="197" height="21"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Get three in a row to win! ">
-                                        <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T0X-Qi-PjT">
+                                <rect key="frame" x="245" y="274" width="95" height="91"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapButtonAction:" destination="iVd-Jw-Tpv" eventType="touchUpInside" id="bID-91-PSC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xHz-9B-zM8">
+                                <rect key="frame" x="29" y="373" width="99" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapButtonAction:" destination="iVd-Jw-Tpv" eventType="touchUpInside" id="JG1-tC-vja"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ugp-fT-yFO">
+                                <rect key="frame" x="247" y="166" width="93" height="95"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapButtonAction:" destination="iVd-Jw-Tpv" eventType="touchUpInside" id="FEk-ol-has"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xjc-lt-Elb">
+                                <rect key="frame" x="243" y="377" width="97" height="94"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapButtonAction:" destination="iVd-Jw-Tpv" eventType="touchUpInside" id="pZb-ts-9PF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgz-y4-KB7">
+                                <rect key="frame" x="139" y="377" width="95" height="94"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapButtonAction:" destination="iVd-Jw-Tpv" eventType="touchUpInside" id="NDC-ZS-qvR"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.60888647708108556" green="0.94077493686868685" blue="0.86951354352609389" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -178,7 +218,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RBB-k2-M7n" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="DqG-Ig-c3y"/>
             </objects>
-            <point key="canvasLocation" x="810.5" y="275.5"/>
+            <point key="canvasLocation" x="819.5" y="292.5"/>
         </scene>
         <!--Winners Page View Controller-->
         <scene sceneID="Ofh-fC-8GB">
@@ -193,16 +233,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XqK-DS-GVG">
-                                <rect key="frame" x="44" y="58" width="288" height="255"/>
+                                <rect key="frame" x="24" y="28" width="329" height="317"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WINNER!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAY-cm-4ql">
-                                <rect key="frame" x="68" y="345" width="224" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pc0-fm-FnP">
+                                <rect key="frame" x="76" y="420" width="224" height="49"/>
+                                <fontDescription key="fontDescription" name="BrandonGrotesque-Medium" family="Brandon Grotesque" pointSize="18"/>
+                                <state key="normal" title="SHARE WITH FRIENDS!">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareOnTwitter:" destination="BW3-gM-CN8" eventType="touchUpInside" id="eRa-de-S9G"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dcx-hI-nWI">
-                                <rect key="frame" x="132" y="394" width="96" height="30"/>
+                                <rect key="frame" x="107" y="463" width="153" height="48"/>
+                                <fontDescription key="fontDescription" name="BrandonGrotesque-Medium" family="Brandon Grotesque" pointSize="15"/>
                                 <state key="normal" title="Play again?">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -211,21 +257,18 @@
                                     <segue destination="iVd-Jw-Tpv" kind="show" id="HQN-Vb-FnF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pc0-fm-FnP">
-                                <rect key="frame" x="116" y="374" width="128" height="30"/>
-                                <state key="normal" title="Share with friends!">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="shareOnTwitter:" destination="BW3-gM-CN8" eventType="touchUpInside" id="eRa-de-S9G"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WINNER!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6SM-5K-iKW">
+                                <rect key="frame" x="24" y="368" width="329" height="39"/>
+                                <fontDescription key="fontDescription" name="Frontage-3D" family="Frontage" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.67748848842752396" blue="0.88797330884725212" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="label" destination="zAY-cm-4ql" id="mRG-8q-L0h"/>
+                        <outlet property="label" destination="6SM-5K-iKW" id="daZ-hi-qOv"/>
                         <outlet property="mainImageView" destination="XqK-DS-GVG" id="61U-4n-2GO"/>
                     </connections>
                 </viewController>
@@ -234,7 +277,11 @@
             <point key="canvasLocation" x="1284.5" y="275.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="field" width="320" height="503"/>
+        <image name="tictaclogo" width="476" height="476"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="HQN-Vb-FnF"/>
+        <segue reference="LWZ-ab-tIy"/>
     </inferredMetricsTieBreakers>
 </document>

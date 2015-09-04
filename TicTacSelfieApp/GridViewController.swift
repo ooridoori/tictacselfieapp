@@ -71,9 +71,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func whichImage() -> UIImage {
       var image = UIImage()
       if currentPlayerMark == "x" {
-        image = UIImage(named: "x.png")!
+        image = UIImage(named: "x-1.png")!
       } else {
-        image = UIImage(named: "o.png")!
+        image = UIImage(named: "o-1.png")!
       }
       return image
     }
@@ -234,6 +234,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     self.dismissViewControllerAnimated(true, completion: checkWinner )
       
   }
+  
+  
 
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

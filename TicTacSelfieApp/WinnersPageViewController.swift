@@ -8,11 +8,8 @@
 
 import UIKit
 import AVFoundation
-import SwiftGIF
-import ImageIO
-import MobileCoreServices
-import AssetsLibrary
 import Social
+import SwiftGIF
 
 class WinnersPageViewController: UIViewController {
   
@@ -63,7 +60,7 @@ class WinnersPageViewController: UIViewController {
       
       let justImages:[UIImage] = self.winnerImages.map{ $0! }
       
-      //------* SWIFTGIF: makes and stores gif into temp file *-------
+//------* SWIFTGIF: makes and stores gif into temp file *-------
     
       createGIF(with: justImages, repeatCount: 0, 0.3 ) { (gifData, err, url) -> () in
         if err == nil {
@@ -75,7 +72,7 @@ class WinnersPageViewController: UIViewController {
 
         }
         
-        
+         
       }
 
       
@@ -93,8 +90,8 @@ class WinnersPageViewController: UIViewController {
   }
   
   func animateImage () {
-    player1.currentIndex++
-    var index = player1.currentIndex % 3
+    playerImages.currentIndex++
+    var index = playerImages.currentIndex % 3
     println(index)
     mainImageView.image = self.winnerImages[index]
 
