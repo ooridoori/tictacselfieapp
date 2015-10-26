@@ -10,6 +10,8 @@
 	<string>TicTacSelfieApp</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>002CCAF16FCD9C402906499FFB099BEC79EDB625</key>
+		<string>https://github.com/DaRkD0G/Easy-Game-Center-Swift.git</string>
 		<key>85DFAA5CBFC4314B2B9A1D73162A51147543ADFF</key>
 		<string>https://github.com/nancyk25/tictacselfieapp.git</string>
 	</dict>
@@ -17,6 +19,8 @@
 	<string>TicTacSelfieApp.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>002CCAF16FCD9C402906499FFB099BEC79EDB625</key>
+		<string>../../Easy-Game-Center-Swift</string>
 		<key>85DFAA5CBFC4314B2B9A1D73162A51147543ADFF</key>
 		<string>..</string>
 	</dict>
@@ -28,6 +32,14 @@
 	<string>85DFAA5CBFC4314B2B9A1D73162A51147543ADFF</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>002CCAF16FCD9C402906499FFB099BEC79EDB625</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Easy-Game-Center-Swift</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

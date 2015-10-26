@@ -94,7 +94,7 @@ class WinnersPageViewController: UIViewController {
     var index = playerImages.currentIndex % 3
     println(index)
     mainImageView.image = self.winnerImages[index]
-
+      
     }
   
   

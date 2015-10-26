@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5A394C85EE746AAD26978057 /* Pods_TicTacSelfieApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A62A54F29DD8A498AD7C6D34 /* Pods_TicTacSelfieApp.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		5A394C85EE746AAD26978057 /* Pods_TicTacSelfieApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A62A54F29DD8A498AD7C6D34 /* Pods_TicTacSelfieApp.framework */; };
 		B92AD6891B9906650004538E /* Brandon_med.otf in Resources */ = {isa = PBXBuildFile; fileRef = B92AD6881B98F3850004538E /* Brandon_med.otf */; };
 		B92AD6931B997CED0004538E /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92AD6921B997CED0004538E /* GameViewController.swift */; };
 		B92FFD5D1B8D3EB50089EC0D /* PlayersImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92FFD5C1B8D3EB50089EC0D /* PlayersImages.swift */; };
@@ -32,6 +32,7 @@
 		B9ADEA041B982516009FE853 /* Frontage-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = B9ADE9FD1B982335009FE853 /* Frontage-Regular.otf */; };
 		B9ADEA051B982519009FE853 /* Frontage-Shadow.otf in Resources */ = {isa = PBXBuildFile; fileRef = B9ADE9FE1B982335009FE853 /* Frontage-Shadow.otf */; };
 		B9ADEA061B98251B009FE853 /* ProximaNova-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B9ADE9FF1B982335009FE853 /* ProximaNova-Semibold.otf */; };
+		B9B819211BCE28280059BA42 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B962EC3D1BCDC43F00151FFE /* GameKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		B9587F781B93FC22000839C8 /* meow.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = meow.wav; sourceTree = "<group>"; };
 		B9587F7A1B9401FB000839C8 /* dougie.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dougie.mp3; sourceTree = "<group>"; };
 		B9587F7C1B94049B000839C8 /* blop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blop.wav; sourceTree = "<group>"; };
+		B962EC3D1BCDC43F00151FFE /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		B962EC3F1BCDC44F00151FFE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		B97284381B92A3AC00BED149 /* Sounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
 		B98BAB201B8C3D03005196B8 /* TicTacSelfieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacSelfieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B98BAB241B8C3D03005196B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9B819211BCE28280059BA42 /* GameKit.framework in Frameworks */,
 				5A394C85EE746AAD26978057 /* Pods_TicTacSelfieApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -193,6 +197,8 @@
 		CB25981687DD9FA9303E4C80 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B962EC3F1BCDC44F00151FFE /* SystemConfiguration.framework */,
+				B962EC3D1BCDC43F00151FFE /* GameKit.framework */,
 				A62A54F29DD8A498AD7C6D34 /* Pods_TicTacSelfieApp.framework */,
 			);
 			name = Frameworks;
@@ -323,7 +329,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TicTacSelfieApp/Pods-TicTacSelfieApp-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/../../../Pods/Target Support Files/Pods-TicTacSelfieApp/Pods-TicTacSelfieApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		245590ACD5D049D4B6BA7FB8 /* Embed Pods Frameworks */ = {

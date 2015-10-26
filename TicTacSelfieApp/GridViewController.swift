@@ -82,9 +82,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
       
       alternatePlayers()
       //get x or o
-            
-      button.setImage(whichImage(), forState: UIControlState.Normal)
+      
+  
+      button.setBackgroundImage(whichImage(), forState: UIControlState.Normal)
+      button.frame = CGRectMake(100,100, 100,100)
+      button.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
       button.userInteractionEnabled = false
+      self.view.addSubview(button)
       
       ++turnCounter
       
@@ -228,8 +232,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     self.imagesArray.append(playerPhoto)
     println(self.imagesArray)
       
-//    UIImageWriteToSavedPhotosAlbum(imageToSave,nil,nil,nil)
-
       
     self.dismissViewControllerAnimated(true, completion: checkWinner )
       

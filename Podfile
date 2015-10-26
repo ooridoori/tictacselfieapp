@@ -1,18 +1,18 @@
+xcodeproj '/Users/Nancy/dev/iOs/TicTacSelfieApp/TicTacSelfieApp.xcodeproj'
+
 # Uncomment this line to define a global platform for your project
-# platform :ios, '6.0'
+# platform :ios, '8.0'
+# Uncomment this line if you're using Swift
+use_frameworks!
 
-target 'TicTacSelfieApp' do use_frameworks!
+target 'TicTacSelfieApp' do
 
-  pod 'SwiftGIF', '~> 0.1'
-pod ‘GifWriter’, '~> 1.0’
+pod 'EasyGameCenter', :git => 'https://github.com/DaRkD0G/Easy-Game-Center-Swift.git'
+
 
 end
 
 target 'TicTacSelfieAppTests' do
 
 end
-
-
-
-
 
