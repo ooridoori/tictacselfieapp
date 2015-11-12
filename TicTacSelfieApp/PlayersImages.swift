@@ -15,8 +15,8 @@ class Player {
   var currentIndex = 0
   var imageArray = [UIImage]()
   
-  func addImage(image:UIImage) {
-    imageArray.append(image)
+  func addImage(image:UIImage?) {
+    imageArray.append(image!)
   }
 
 }

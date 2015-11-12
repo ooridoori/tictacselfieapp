@@ -219,7 +219,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
     let imagePath = paths.stringByAppendingPathComponent("PlayerX.png")
     
-    if !imageData.writeToFile(imagePath, atomically: false)
+    if imageData.writeToFile(imagePath, atomically: false)
     {
       println("not saved")
     } else {

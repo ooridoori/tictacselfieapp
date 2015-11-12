@@ -91,7 +91,8 @@ class WinnersPageViewController: UIViewController {
   
   func animateImage () {
     playerImages.currentIndex++
-    var index = playerImages.currentIndex % 3
+    let imageCount:Int = winnerImages.count
+    var index = playerImages.currentIndex % imageCount
     println(index)
     mainImageView.image = self.winnerImages[index]
       

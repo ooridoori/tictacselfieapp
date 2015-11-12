@@ -140,15 +140,11 @@
 				B97284381B92A3AC00BED149 /* Sounds.swift */,
 				B98BAB271B8C3D03005196B8 /* GridViewController.swift */,
 				B92FFD601B8D3EEE0089EC0D /* WinnersPageViewController.swift */,
-				B9587F7C1B94049B000839C8 /* blop.wav */,
-				B9587F701B93EBC9000839C8 /* pop_drip.wav */,
-				B9587F7A1B9401FB000839C8 /* dougie.mp3 */,
-				B9587F761B93FB20000839C8 /* chime_short_chord_up.wav */,
-				B9587F781B93FC22000839C8 /* meow.wav */,
 				B98BAB291B8C3D03005196B8 /* Main.storyboard */,
-				B98BAB2C1B8C3D03005196B8 /* Images.xcassets */,
-				B9ADE9F81B982118009FE853 /* Fonts */,
 				B98BAB2E1B8C3D03005196B8 /* LaunchScreen.xib */,
+				B98BAB2C1B8C3D03005196B8 /* Images.xcassets */,
+				B9D5058F1BF402ED009451A4 /* Sounds */,
+				B9ADE9F81B982118009FE853 /* Fonts */,
 				B98BAB231B8C3D03005196B8 /* Supporting Files */,
 			);
 			path = TicTacSelfieApp;
@@ -192,6 +188,18 @@
 				B92AD6881B98F3850004538E /* Brandon_med.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		B9D5058F1BF402ED009451A4 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				B9587F7A1B9401FB000839C8 /* dougie.mp3 */,
+				B9587F781B93FC22000839C8 /* meow.wav */,
+				B9587F761B93FB20000839C8 /* chime_short_chord_up.wav */,
+				B9587F701B93EBC9000839C8 /* pop_drip.wav */,
+				B9587F7C1B94049B000839C8 /* blop.wav */,
+			);
+			name = Sounds;
 			sourceTree = "<group>";
 		};
 		CB25981687DD9FA9303E4C80 /* Frameworks */ = {
