@@ -100,77 +100,77 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
   
   func checkWinner() {
     
-      println(rowCombos)
+      print(rowCombos)
       
-      var endGame = false
+//      var endGame = false
       var winner = ""
-      var x = "x"
-      var o = "o"
+      let x = "x"
+      let o = "o"
       
       if rowCombos[0] == "x" && rowCombos[1] == "x" && rowCombos[2] == "x" {
-        println("x wins!")
-        endGame = true
+        print("x wins!")
+//        endGame = true
         winner = "x"
       }else if rowCombos[0] == "o" && rowCombos[1] == "o" && rowCombos[2] == "o"{
-        println("o wins!")
-        endGame = true
+        print("o wins!")
+//        endGame = true
         winner = "o"
       }else if rowCombos[3] == "x" && rowCombos[4] == "x" && rowCombos[5] == "x" {
-        println("x wins!")
+        print("x wins!")
         winner = x
-        endGame = true
+//        endGame = true
       }else if rowCombos[3] == "o" && rowCombos[4] == "o" && rowCombos[5] == "o" {
-        println("o wins!")
+        print("o wins!")
         winner = o
-        endGame = true
+//        endGame = true
       } else if rowCombos[6] == "x" && rowCombos[7] == "x" && rowCombos[8] == "x"{
-        println("x wins!")
+        print("x wins!")
                 winner = x
-        endGame = true
+//        endGame = true
       } else if rowCombos[6] == "o" && rowCombos[7] == "o" && rowCombos[8] == "o"{
-        println("o wins!")
+        print("o wins!")
                 winner = o
-        endGame = true
+//        endGame = true
       } else if rowCombos[0] == "x" && rowCombos[3] == "x" && rowCombos[6] == "x"{
-        println("x wins!")
+        print("x wins!")
                 winner = x
-        endGame = true
+//        endGame = true
       } else if rowCombos[0] == "o" && rowCombos[3] == "o" && rowCombos[6] == "o"{
-        println("o wins!")
+        print("o wins!")
                 winner = o
-        endGame = true
+//        endGame = true
       } else if rowCombos[1] == "x" && rowCombos[4] == "x"  && rowCombos[7] == "x"{
-        println("x wins!")
+        print("x wins!")
                 winner = x
-        endGame = true
+//        endGame = true
       } else if rowCombos[1] == "o" && rowCombos[4] == "o" && rowCombos[7] == "o"{
-        println("o wins!")
+        print("o wins!")
                 winner = o
-        endGame = true
+//        endGame = true
       } else if rowCombos[2] == "x" && rowCombos[5] == "x" && rowCombos[8] == "x"{
-        println("x wins!")
+        print("x wins!")
                 winner = x
-        endGame = true
+//        endGame = true
       } else if rowCombos[2] == "o" && rowCombos[5] == "o" && rowCombos[8] == "o"{
-        println("o wins!")
+        print("o wins!")
                 winner = o
-        endGame = true
+//        endGame = true
       } else if rowCombos[0] == "x" && rowCombos[4] == "x" && rowCombos[8] == "x"{
-        println("x wins!")
+        print("x wins!")
         winner = x
-        endGame = true
+//        endGame = true
       } else if rowCombos[0] == "o"  && rowCombos[4] == "o" && rowCombos[8] == "o"{
-        println("o wins!")
+        print("o wins!")
                 winner = o
-        endGame = true
+//        endGame = true
       } else if rowCombos[2] == "x" && rowCombos[4] == "x" && rowCombos[6] == "x"{
         winner = x
-        println("x wins!")
-        endGame = true
+        print("x wins!")
+//        endGame = true
       } else if rowCombos[2] == "o" && rowCombos[4] == "o" && rowCombos[6] == "o"{
-        println("o wins!")
+        print("o wins!")
         winner = o
-        endGame = true
+//        endGame = true
       }
     
       print(isCatsGame(turnCounter), "is all grid filled up???")
@@ -193,16 +193,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     imagePicker = UIImagePickerController()
     imagePicker.delegate = self
 
-    var frontCam = UIImagePickerControllerCameraDevice.Front
+    let frontCam = UIImagePickerControllerCameraDevice.Front
     if UIImagePickerController.isCameraDeviceAvailable(frontCam) {
       imagePicker.sourceType = .Camera
       imagePicker.cameraDevice = UIImagePickerControllerCameraDevice.Front;
-      println("front camera ")
+      print("front camera ")
       presentViewController(imagePicker, animated: true, completion: nil)
       
     } else {
       imagePicker.sourceType = .PhotoLibrary
-      println("no camera ")
+      print("no camera ")
       presentViewController(imagePicker, animated: true, completion: nil)
       
     }    
@@ -210,27 +210,32 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
   }
 
   func imagePickerController(picker: UIImagePickerController,
-    didFinishPickingMediaWithInfo info: [NSObject: AnyObject]){
+    didFinishPickingMediaWithInfo info: [String: AnyObject]){
     
     
-    var imageToSave = info[UIImagePickerControllerOriginalImage] as? UIImage
+    let imageToSave = info[UIImagePickerControllerOriginalImage] as? UIImage
     
-    let imageData = UIImagePNGRepresentation(imageToSave)
-    let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
-    let imagePath = paths.stringByAppendingPathComponent("PlayerX.png")
+//this is for saving an image to document directory... maybe need later?
+//    let imageData = UIImagePNGRepresentation(imageToSave!)
+//    let docFolderPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0]
     
-    if imageData.writeToFile(imagePath, atomically: false)
-    {
-      println("not saved")
-    } else {
-      println("saved")
-      NSUserDefaults.standardUserDefaults().setObject(imagePath, forKey: "imagePath")
-    }
-    
-    println(imagePath)
-    var playerPhoto = [currentPlayerMark: imageToSave!]
+//    print("paths----->", docFolderPath)
+      
+//      let imagePath = docFolderPath + "/PlayerX.png"
+      
+//      print("imagePath--------->", imagePath)
+//    
+//    if imageData!.writeToFile(imagePath, atomically: false)
+//    {
+//      print("not saved")
+//    } else {
+//      print("saved")
+//      NSUserDefaults.standardUserDefaults().setObject(imagePath, forKey: "imagePath")
+//    }
+      
+    let playerPhoto = [currentPlayerMark: imageToSave!]
     self.imagesArray.append(playerPhoto)
-    println(self.imagesArray)
+    print(self.imagesArray)
       
       
     self.dismissViewControllerAnimated(true, completion: checkWinner )
@@ -272,7 +277,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     winnersPage.winnerLabel = announcement
     
-    println("printing the photos: \(photos)")
+    print("printing the photos: \(photos)")
 
     winnersPage.winnerImages = photos
     

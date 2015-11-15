@@ -12,54 +12,54 @@ import AVFoundation
  
   var audioPlayer = AVAudioPlayer()
 
+  func playSound(clip_name: String, clip_type: String) {
+      let alertSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource(clip_name, ofType: clip_type)!)
+//      print(alertSound)
+      try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, withOptions: [])
+      try! AVAudioSession.sharedInstance().setActive(true)
+
+      do {
+        try audioPlayer = AVAudioPlayer(contentsOfURL: alertSound)
+        audioPlayer.prepareToPlay()
+        audioPlayer.play()
+      } catch {
+        print("there is \(error)")
+      }
+  }
+
+
   func startNewGame(){
-    var alertSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("chime_short_chord_up", ofType: "wav")!)
-    println(alertSound)
-    var error:NSError?
-    audioPlayer = AVAudioPlayer(contentsOfURL: alertSound, error: &error)
-    audioPlayer.prepareToPlay()
-    audioPlayer.play()
+//    let alertSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("chime_short_chord_up", ofType: "wav")!)
+
+    playSound("chime_short_chord_up", clip_type: "wav")
     
   }
   
   func pressedButton(){
-    var alertSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("pop_drip", ofType: "wav")!)
-    println(alertSound)
-    var error:NSError?
-    audioPlayer = AVAudioPlayer(contentsOfURL: alertSound, error: &error)
-    audioPlayer.prepareToPlay()
-    audioPlayer.play()
+//    let alertSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("pop_drip", ofType: "wav")!)
+
+    playSound("pop_drip", clip_type: "wav")
     
   }
   
   func winnerWinner(){
-    var alertSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("dougie", ofType: "mp3")!)
-    println(alertSound)
-    var error:NSError?
-    audioPlayer = AVAudioPlayer(contentsOfURL:alertSound, error: &error)
-    audioPlayer.prepareToPlay()
-    audioPlayer.play()
+//    let alertSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("dougie", ofType: "mp3")!)
+    
+    playSound("dougie", clip_type: "mp3")
     
   }
   
   func catsGame(){
-    var alertSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("meow", ofType: "wav")!)
-    println(alertSound)
-    var error:NSError?
-    audioPlayer = AVAudioPlayer(contentsOfURL: alertSound, error: &error)
-    audioPlayer.prepareToPlay()
-    audioPlayer.play()
+//    let alertSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("meow", ofType: "wav")!)
+    
+    playSound("meow", clip_type: "wav")
     
   }
 
 func blop(){
-  var alertSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("blop", ofType: "wav")!)
-  println(alertSound)
-  var error:NSError?
-  audioPlayer = AVAudioPlayer(contentsOfURL: alertSound, error: &error)
-  audioPlayer.prepareToPlay()
-  audioPlayer.play()
-}
-
+//  let alertSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("blop", ofType: "wav")!)
+  
+    playSound("blop", clip_type: "wav")
+  }
 
 

@@ -34,21 +34,21 @@ public func createGIF(with images: [UIImage],
     let frameProperties = [kCGImagePropertyGIFDictionary as String: [kCGImagePropertyGIFDelayTime as String: frameDelay]]
     
     let documentsDirectory = NSTemporaryDirectory()
-    let url = NSURL(fileURLWithPath: documentsDirectory)?.URLByAppendingPathComponent("animated.gif")
+    let url = NSURL(fileURLWithPath: documentsDirectory).URLByAppendingPathComponent("animated.gif")
     
-    if let url = url {
+    if url == url {
         let destination = CGImageDestinationCreateWithURL(url, kUTTypeGIF, images.count, nil)
-        CGImageDestinationSetProperties(destination, fileProperties)
+        CGImageDestinationSetProperties(destination!, fileProperties)
         
         for i in 0..<images.count {
-            CGImageDestinationAddImage(destination, images[i].CGImage, frameProperties)
+            CGImageDestinationAddImage(destination!, images[i].CGImage!, frameProperties)
         }
       
-        println("url-----------")
-        println(destination)
-        println(url)
+        print("url-----------")
+       print(destination)
+      print(url)
       
-        if CGImageDestinationFinalize(destination) {
+        if CGImageDestinationFinalize(destination!) {
             callback(data: NSData(contentsOfURL: url), error: nil, url: url)
         } else {
             callback(data: nil, error: createErrorFromString("Couldn't create the final image"), url: url)

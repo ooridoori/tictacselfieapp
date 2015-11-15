@@ -29,9 +29,9 @@ class WinnersPageViewController: UIViewController {
   
   @IBAction func shareOnTwitter(sender: AnyObject) {
   
-    var textToShare = "I just won TicTacSelfie! 😜"
+    let textToShare = "I just won TicTacSelfie! 😜"
     
-    var objectsToShare = [textToShare,self.imageData]
+    let objectsToShare = [textToShare,self.imageData]
     
     let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
     
@@ -56,16 +56,16 @@ class WinnersPageViewController: UIViewController {
       self.label.text = self.winnerLabel
       self.mainImageView.contentMode = .ScaleAspectFit
       self.mainImageView.image = self.winnerImages[0]
-      println(self.winnerLabel)
+      print(self.winnerLabel)
       
       let justImages:[UIImage] = self.winnerImages.map{ $0! }
       
 //------* SWIFTGIF: makes and stores gif into temp file *-------
     
-      createGIF(with: justImages, repeatCount: 0, 0.3 ) { (gifData, err, url) -> () in
+      createGIF(with: justImages, repeatCount: 0, frameDelay: 0.3 ) { (gifData, err, url) -> () in
         if err == nil {
-          println("createGIF callback, url")
-          println(url)
+          print("createGIF callback, url")
+          print(url)
           
             self.imageData = NSData(contentsOfURL: url!)!
           
@@ -92,8 +92,8 @@ class WinnersPageViewController: UIViewController {
   func animateImage () {
     playerImages.currentIndex++
     let imageCount:Int = winnerImages.count
-    var index = playerImages.currentIndex % imageCount
-    println(index)
+    let index = playerImages.currentIndex % imageCount
+    print(index)
     mainImageView.image = self.winnerImages[index]
       
     }
