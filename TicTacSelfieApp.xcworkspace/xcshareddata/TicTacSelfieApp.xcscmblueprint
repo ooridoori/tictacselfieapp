@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "85DFAA5CBFC4314B2B9A1D73162A51147543ADFF",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "85DFAA5CBFC4314B2B9A1D73162A51147543ADFF" : 0,
+    "002CCAF16FCD9C402906499FFB099BEC79EDB625" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "79188D8D-67C8-434F-A1EC-843C80E84008",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "85DFAA5CBFC4314B2B9A1D73162A51147543ADFF" : "TicTacSelfieApp",
+    "002CCAF16FCD9C402906499FFB099BEC79EDB625" : "Easy-Game-Center-Swift"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "TicTacSelfieApp",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "TicTacSelfieApp.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/DaRkD0G\/Easy-Game-Center-Swift.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "002CCAF16FCD9C402906499FFB099BEC79EDB625"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/nancyk25\/tictacselfieapp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "85DFAA5CBFC4314B2B9A1D73162A51147543ADFF"
+    }
+  ]
+}

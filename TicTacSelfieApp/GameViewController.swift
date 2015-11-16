@@ -10,20 +10,16 @@ import UIKit
 import GameKit
 
 
-class GameViewController: UIViewController{
-  
-  
-  
-
-
-
-  
+class GameViewController: UIViewController {
   
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+      
+      
+      
     }
 
     override func didReceiveMemoryWarning() {
