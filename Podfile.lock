@@ -1,13 +1,25 @@
 PODS:
-  - GifWriter (1.0.0)
+  - EasyGameCenter (2.3.0)
+  - Firebase (2.4.3)
   - SwiftGIF (0.1.0)
 
 DEPENDENCIES:
-  - GifWriter (~> 1.0)
+  - EasyGameCenter (from `https://github.com/DaRkD0G/Easy-Game-Center-Swift.git`)
+  - Firebase (>= 2.4.3)
   - SwiftGIF (~> 0.1)
 
+EXTERNAL SOURCES:
+  EasyGameCenter:
+    :git: https://github.com/DaRkD0G/Easy-Game-Center-Swift.git
+
+CHECKOUT OPTIONS:
+  EasyGameCenter:
+    :commit: 954e234521010f7be7a481a284e316cc9f2d07f2
+    :git: https://github.com/DaRkD0G/Easy-Game-Center-Swift.git
+
 SPEC CHECKSUMS:
-  GifWriter: 4d5298911652b0801312cda669d516ac079d94ff
+  EasyGameCenter: b85709064d1d9181422a6a9d0fcf58ed93f9122c
+  Firebase: 48179995b561e2262c5d4060ecdffca45fbbff8b
   SwiftGIF: 8ef7165142b543b3724bbea9d874410d5c7623a2
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.39.0

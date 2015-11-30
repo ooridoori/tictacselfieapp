@@ -7,87 +7,176 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		109F7451F9619CD59378D1A9828AB958 /* Pods-TicTacSelfieApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BF26C159A740F536A71AEC354E249CBF /* Pods-TicTacSelfieApp-dummy.m */; };
-		532FA22DD2D2A3579813DC62A5AC526C /* Pods-TicTacSelfieApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B4FE42D473BE21EA75B6A3F0E880A5B5 /* Pods-TicTacSelfieApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		56A0A243F04918AE8738F0B02EC3B340 /* SwiftGIF-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 50EEB6BFE4B99677AC37AC538BC0E819 /* SwiftGIF-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AD6BD9BEE5E371C00C7ADC3C1081064B /* SwiftGIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333DC939806FE0431B7BC0DF2A7EC218 /* SwiftGIF.swift */; };
-		B097A2412882701C59007537E73BEF8B /* SwiftGIF-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C14060C18F25204D5D94BEADB67FDAD9 /* SwiftGIF-dummy.m */; };
-		D0859819871E7BE06755A98F253F6B5F /* SwiftGIF.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 959772FD4E5D7952F224885C2800FB75 /* SwiftGIF.bundle */; };
+		012A7E018F3D34F159894EBD7EACACF9 /* Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = 242AE208B284E0930DD70DA10C6494A8 /* Empty.m */; };
+		083E27434D3775297E57907C6663B772 /* Pods-TicTacSelfieApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 73FB1DC761E8353343D99AE3722ADD35 /* Pods-TicTacSelfieApp-dummy.m */; };
+		0D8B46464190657264CF4BA320BD07E8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 222CE457F57AE8807FFC7AB308BAFFFC /* UIKit.framework */; };
+		191DE2EB9A35585AE0A88BA9F833A1F4 /* FTransactionResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 759D1EADA0BEC30256110A1B578E6A2E /* FTransactionResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1C04A7CD5B70C4561F6D98C882731C65 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95593D9AE4212570BD3D81E2B5E022F /* Security.framework */; };
+		1C3EF85CD30E6FF2E51471BD5B3CEB29 /* Firebase.h in Headers */ = {isa = PBXBuildFile; fileRef = F17E22E4582A5EDEA21493267D27D81A /* Firebase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D925BB011B04DDED982C7946571A67A /* FAuthType.h in Headers */ = {isa = PBXBuildFile; fileRef = F3AED4A24DE203AABF27B80387724DF0 /* FAuthType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D9D7FF5237C8CC91EF58DC45AC274FB /* Firebase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 415939B1411A4BABDD817529664F6CCB /* Firebase-dummy.m */; };
+		239B10F388840841389B7F09648735B1 /* FEventType.h in Headers */ = {isa = PBXBuildFile; fileRef = 57119676BE444B310502579B9C33505F /* FEventType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2BAB097A059AFB4E7AD71BB630720018 /* EasyGameCenter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BAB63A5D2787B574371BCE9D72206F /* EasyGameCenter-dummy.m */; };
+		2F1496011DBBB75777645194AAAFE92D /* FirebaseApp.h in Headers */ = {isa = PBXBuildFile; fileRef = 6289E1263A34F8AB22ECF48038102751 /* FirebaseApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3EA7D799032EEDFDED4B37C16737D2D7 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E5979948E6876093D4BE199922C4FF8 /* MobileCoreServices.framework */; };
+		4006C2F7F34946E7385B6A0294464D7B /* SwiftGIF.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FDA2662C1FFE09491F8150662A609892 /* SwiftGIF.bundle */; };
+		47804C12B85941A38729E2D34125E267 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6D2510B770C7F63B84B3A87D673B1EA /* GameKit.framework */; };
+		4B0EFAAA29109D9A705A27EFFA10FAE2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0938AA4FE57E87F4D9C0DAE5C4F2F10 /* Foundation.framework */; };
+		4D75CF0089B20355B17A851513C4A002 /* FQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = F515FB85F98F488DABEF2AE04FD4487D /* FQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		56A9446F47F82C47193971ED364EC36A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BA3136AD0E133A8ADEBD5CC77E497DB /* SystemConfiguration.framework */; };
+		5ECE1915A9BFE32834586BE742A7F451 /* Pods-TicTacSelfieApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7774A73313A77F26D15ED8BAAA068789 /* Pods-TicTacSelfieApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F8B2E2BEF6F109A91FA07AC44B0E4B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0938AA4FE57E87F4D9C0DAE5C4F2F10 /* Foundation.framework */; };
+		6000AE915A6A44296DCE5798A5CB17F8 /* EasyGameCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93104F2CDF33CE022F143885F292C08 /* EasyGameCenter.swift */; };
+		60F9139BDD38565B78214C4FC5F5729D /* Firebase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B403003101F4279F283293B6B77F9194 /* Firebase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6646DA26298257396C7FFE141BB84CC3 /* FirebaseServerValue.h in Headers */ = {isa = PBXBuildFile; fileRef = C52B78C9CBF7E48DC0DDF85CA10A69A0 /* FirebaseServerValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6DEB04B56AAAE3415233F16A20CFDDF6 /* SwiftGIF-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F04A75983DB67347975FC7AC04BDFB73 /* SwiftGIF-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77107B921659BFDEF47E0CECB4837E64 /* SwiftGIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76ECEFFEC31C68333A50E878D735D321 /* SwiftGIF.swift */; };
+		B71AF7F320869C5329B4FEF72D10C953 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0938AA4FE57E87F4D9C0DAE5C4F2F10 /* Foundation.framework */; };
+		BF699DD166A0120A313689387B9F43E1 /* EasyGameCenter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AE301B101D507187A9721424457E9B5F /* EasyGameCenter-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C23FCF31260D47CEC1494A292DAA1A1E /* FAuthData.h in Headers */ = {isa = PBXBuildFile; fileRef = 3327708463EB31469107B9BC07716974 /* FAuthData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4C5D12F4CE6EBE278F2E6408193100C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0938AA4FE57E87F4D9C0DAE5C4F2F10 /* Foundation.framework */; };
+		D3919DF9D786D73EDF8E6FFA663AB529 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBFF7793F1D77630BF600AFC753ACE1A /* ImageIO.framework */; };
+		DB05A9DD8244D10C28B6915C514AE15F /* FMutableData.h in Headers */ = {isa = PBXBuildFile; fileRef = 81986624EEB828D622E634C1CD0E0B8F /* FMutableData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E1A883FEBDEED9B85D90D6BE2080F218 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BA3136AD0E133A8ADEBD5CC77E497DB /* SystemConfiguration.framework */; };
+		E3FBB5B462A14E8ACC9B340227DE4BE1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 957CEF0148FE374DBB252EFE9BBE9D51 /* CFNetwork.framework */; };
+		E60FA42EEC3ECC48701DB55986D25D69 /* FConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = DADD70C28677C782B5E94FB5252F621E /* FConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E8B534D15D2B25919ACD898217266891 /* FDataSnapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DB48F7BAD2E9EC134239FFCDD510E08 /* FDataSnapshot.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE47B6D32630C2740F1248B0D2E45FA6 /* SwiftGIF-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F26A7643DEC54FE091DFDC80CA3A520 /* SwiftGIF-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		41C3EA73F349947CA421E7691D8688ED /* PBXContainerItemProxy */ = {
+		2870AF16E0BADAFE7635AC68C4A5AD34 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 28CF070FD1FDA6D4396101988197F40C;
+			remoteGlobalIDString = 2F0EEC6883CB19E10F635DF4FF1C35A9;
 			remoteInfo = SwiftGIF;
 		};
-		C03C4D29798E81E0338DEC19C3428442 /* PBXContainerItemProxy */ = {
+		53EAEDAC4527C425ED35BBC9B7CA1A85 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A0E95039F382F7D01A844ECE93CA1B0F;
+			remoteGlobalIDString = ADB1D18FDF13AA6E80A21AFDCEA48F50;
 			remoteInfo = "SwiftGIF-SwiftGIF";
 		};
-		D1D45946C60573C0151C2D7917BFCE4B /* PBXContainerItemProxy */ = {
+		93932E935C0614DC11BCC28310C05FB8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 73CCE54D5DE1703E52C13ACAC8FA3810;
-			remoteInfo = GifWriter;
+			remoteGlobalIDString = C86E879D2FB6A752C7C40AF50E7B7ACC;
+			remoteInfo = EasyGameCenter;
+		};
+		B0B26AEB6E8A1EA2425A21F9C8D722D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7AC9326D819482593FE118E915409D7;
+			remoteInfo = Firebase;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		070DEF54AF7DC703D1CAB8B44B80C414 /* Pods-TicTacSelfieApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TicTacSelfieApp.release.xcconfig"; sourceTree = "<group>"; };
 		13B334BB52B5346C90A6503EB486FBAE /* Pods-TicTacSelfieApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TicTacSelfieApp-acknowledgements.plist"; sourceTree = "<group>"; };
-		152F6ABB05E6037F4891DEE416D02668 /* SwiftGIF-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftGIF-prefix.pch"; sourceTree = "<group>"; };
 		1C2552DFEC61C283B2EE61B52C7A12F2 /* Pods-TicTacSelfieApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TicTacSelfieApp-resources.sh"; sourceTree = "<group>"; };
-		333DC939806FE0431B7BC0DF2A7EC218 /* SwiftGIF.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftGIF.swift; path = Pod/Classes/SwiftGIF.swift; sourceTree = "<group>"; };
-		3BDB3E3CD0C8B7194119692B36A1DE24 /* Pods-TicTacSelfieApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TicTacSelfieApp.release.xcconfig"; sourceTree = "<group>"; };
-		408A17F4321B339CBA8DAF7599F7E474 /* SwiftGIF.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftGIF.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E2B02B57F9D7B50BABE69A8365D57E8 /* Pods-TicTacSelfieApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TicTacSelfieApp.debug.xcconfig"; sourceTree = "<group>"; };
-		50EEB6BFE4B99677AC37AC538BC0E819 /* SwiftGIF-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftGIF-umbrella.h"; sourceTree = "<group>"; };
-		52D2B44999F2D3A18500C2AC077195A9 /* SwiftGIF.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftGIF.modulemap; sourceTree = "<group>"; };
-		5F4AE64829DA5BF411B8DC513BE6A7E3 /* SwiftGIF.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftGIF.xcconfig; sourceTree = "<group>"; };
+		222CE457F57AE8807FFC7AB308BAFFFC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		242AE208B284E0930DD70DA10C6494A8 /* Empty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Empty.m; sourceTree = "<group>"; };
+		26DBB58E8A94921DB8018D36AB2AC704 /* EasyGameCenter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EasyGameCenter.xcconfig; sourceTree = "<group>"; };
+		2913FA1948FAC58908C0C34969F57E74 /* Firebase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Firebase.xcconfig; sourceTree = "<group>"; };
+		2D6B8C4953E21B2055CC73CFAE7A4C7E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E5979948E6876093D4BE199922C4FF8 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
+		2F26A7643DEC54FE091DFDC80CA3A520 /* SwiftGIF-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftGIF-dummy.m"; sourceTree = "<group>"; };
+		3327708463EB31469107B9BC07716974 /* FAuthData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FAuthData.h; sourceTree = "<group>"; };
+		38CF1F5B3334329854DDBFE06780B786 /* libFirebaseStatic.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = libFirebaseStatic.a; sourceTree = "<group>"; };
+		3DB48F7BAD2E9EC134239FFCDD510E08 /* FDataSnapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FDataSnapshot.h; sourceTree = "<group>"; };
+		415939B1411A4BABDD817529664F6CCB /* Firebase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Firebase-dummy.m"; sourceTree = "<group>"; };
+		427B381A9246A61D43BE819B3EF74A97 /* EasyGameCenter.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = EasyGameCenter.modulemap; sourceTree = "<group>"; };
+		4F28B52DE430855A235BC726A33888EB /* Pods_TicTacSelfieApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TicTacSelfieApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		57119676BE444B310502579B9C33505F /* FEventType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FEventType.h; sourceTree = "<group>"; };
+		5BA3136AD0E133A8ADEBD5CC77E497DB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		6289E1263A34F8AB22ECF48038102751 /* FirebaseApp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FirebaseApp.h; sourceTree = "<group>"; };
+		632227D2D87D1AC3F4F64BFD05A2C432 /* Firebase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Firebase.modulemap; sourceTree = "<group>"; };
+		6399230F310877A9AD8E85D11665F049 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BD830678F07A3224DDD3C68D770F87B /* Firebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Firebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		734E1CAB1BF07457FB0162E639CE99B3 /* Pods-TicTacSelfieApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TicTacSelfieApp.modulemap"; sourceTree = "<group>"; };
-		7748A387E31F61F5FE3FECD49660DD31 /* Pods_TicTacSelfieApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TicTacSelfieApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		77F47F7B0A1265BB30913930FC0069AE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73FB1DC761E8353343D99AE3722ADD35 /* Pods-TicTacSelfieApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TicTacSelfieApp-dummy.m"; sourceTree = "<group>"; };
+		759D1EADA0BEC30256110A1B578E6A2E /* FTransactionResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FTransactionResult.h; sourceTree = "<group>"; };
+		76ECEFFEC31C68333A50E878D735D321 /* SwiftGIF.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftGIF.swift; path = Pod/Classes/SwiftGIF.swift; sourceTree = "<group>"; };
+		7774A73313A77F26D15ED8BAAA068789 /* Pods-TicTacSelfieApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TicTacSelfieApp-umbrella.h"; sourceTree = "<group>"; };
+		81986624EEB828D622E634C1CD0E0B8F /* FMutableData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FMutableData.h; sourceTree = "<group>"; };
 		9501100D0A3A3B61C49C6C51F0E354C4 /* Pods-TicTacSelfieApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TicTacSelfieApp-frameworks.sh"; sourceTree = "<group>"; };
-		959772FD4E5D7952F224885C2800FB75 /* SwiftGIF.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftGIF.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		957CEF0148FE374DBB252EFE9BBE9D51 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 		962A2C15636A5CAE094C7D4A7D0BEC9F /* Pods-TicTacSelfieApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TicTacSelfieApp-acknowledgements.markdown"; sourceTree = "<group>"; };
-		A53A4215AF6657817301ADF98A1CD4CD /* SwiftGIF-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SwiftGIF-Private.xcconfig"; sourceTree = "<group>"; };
-		B4FE42D473BE21EA75B6A3F0E880A5B5 /* Pods-TicTacSelfieApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TicTacSelfieApp-umbrella.h"; sourceTree = "<group>"; };
+		968450A96204FF99BB01CB8CA8F0CC0B /* SwiftGIF.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftGIF.modulemap; sourceTree = "<group>"; };
+		98638A64EEAB9A4B80E139D809CD10E7 /* Pods-TicTacSelfieApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TicTacSelfieApp.debug.xcconfig"; sourceTree = "<group>"; };
+		9FFFA71B144E4C66628BE6CA34C37E10 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1FE21047B3B0175507E6C4D6291CCA1 /* EasyGameCenter-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EasyGameCenter-prefix.pch"; sourceTree = "<group>"; };
+		A4BAB63A5D2787B574371BCE9D72206F /* EasyGameCenter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EasyGameCenter-dummy.m"; sourceTree = "<group>"; };
+		A6D2510B770C7F63B84B3A87D673B1EA /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/GameKit.framework; sourceTree = DEVELOPER_DIR; };
+		AE301B101D507187A9721424457E9B5F /* EasyGameCenter-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EasyGameCenter-umbrella.h"; sourceTree = "<group>"; };
+		AFB8A50AD6D2DE7B90633311424F394D /* SwiftGIF.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftGIF.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B23D36A0FB23F2D7641AD80325886AE3 /* SwiftGIF-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftGIF-prefix.pch"; sourceTree = "<group>"; };
+		B403003101F4279F283293B6B77F9194 /* Firebase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Firebase-umbrella.h"; sourceTree = "<group>"; };
+		B93104F2CDF33CE022F143885F292C08 /* EasyGameCenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EasyGameCenter.swift; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BF26C159A740F536A71AEC354E249CBF /* Pods-TicTacSelfieApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TicTacSelfieApp-dummy.m"; sourceTree = "<group>"; };
-		C14060C18F25204D5D94BEADB67FDAD9 /* SwiftGIF-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftGIF-dummy.m"; sourceTree = "<group>"; };
-		CD6E27405C9C13C2F6C82138E7346314 /* GifWriter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GifWriter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0938AA4FE57E87F4D9C0DAE5C4F2F10 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		C52B78C9CBF7E48DC0DDF85CA10A69A0 /* FirebaseServerValue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FirebaseServerValue.h; sourceTree = "<group>"; };
+		CE1D62160A710C549BA33CE19F132F93 /* Firebase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Firebase-prefix.pch"; sourceTree = "<group>"; };
+		D55504B7348FA9898B44FB687CFE9E88 /* EasyGameCenter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EasyGameCenter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D95593D9AE4212570BD3D81E2B5E022F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		DADD70C28677C782B5E94FB5252F621E /* FConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FConfig.h; sourceTree = "<group>"; };
+		F04A75983DB67347975FC7AC04BDFB73 /* SwiftGIF-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftGIF-umbrella.h"; sourceTree = "<group>"; };
+		F17E22E4582A5EDEA21493267D27D81A /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Firebase.h; sourceTree = "<group>"; };
 		F305B0C714650FA5EBD78EC5A5ACE325 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3AED4A24DE203AABF27B80387724DF0 /* FAuthType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FAuthType.h; sourceTree = "<group>"; };
+		F515FB85F98F488DABEF2AE04FD4487D /* FQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FQuery.h; sourceTree = "<group>"; };
+		FBC7B9037FAD25361DAF0363C0217F08 /* SwiftGIF.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftGIF.xcconfig; sourceTree = "<group>"; };
+		FBFF7793F1D77630BF600AFC753ACE1A /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
+		FDA2662C1FFE09491F8150662A609892 /* SwiftGIF.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftGIF.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		265FCE3AA8E2D1555F08B6BCA4C63812 /* Frameworks */ = {
+		6B5D8B4D6FB54F8C9A1BC5FF0F355EA1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B71AF7F320869C5329B4FEF72D10C953 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		705C087C52144A09BBCDB28856EE10AD /* Frameworks */ = {
+		9D536E16664126C10F6D697383E2481C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4C5D12F4CE6EBE278F2E6408193100C /* Foundation.framework in Frameworks */,
+				47804C12B85941A38729E2D34125E267 /* GameKit.framework in Frameworks */,
+				56A9446F47F82C47193971ED364EC36A /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D0C6BF36FB4082E5CDA05B9EC9D1775D /* Frameworks */ = {
+		A09C5AF310119C3ACBA6FE77B702E14B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F8B2E2BEF6F109A91FA07AC44B0E4B7 /* Foundation.framework in Frameworks */,
+				D3919DF9D786D73EDF8E6FFA663AB529 /* ImageIO.framework in Frameworks */,
+				3EA7D799032EEDFDED4B37C16737D2D7 /* MobileCoreServices.framework in Frameworks */,
+				0D8B46464190657264CF4BA320BD07E8 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F21E53B905CB581E6F40A829F03505DD /* Frameworks */ = {
+		A7E10F383DCD59079712A57B50DCF88E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3FBB5B462A14E8ACC9B340227DE4BE1 /* CFNetwork.framework in Frameworks */,
+				4B0EFAAA29109D9A705A27EFFA10FAE2 /* Foundation.framework in Frameworks */,
+				1C04A7CD5B70C4561F6D98C882731C65 /* Security.framework in Frameworks */,
+				E1A883FEBDEED9B85D90D6BE2080F218 /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B052079F3FBC418563CF87B31106CCC7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -97,40 +186,99 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */ = {
+		003666D143C457CAB44E7622B64E3F13 /* EasyGameCenter */ = {
 			isa = PBXGroup;
 			children = (
-				EFAD2055552D2AD30FB7664412E47E6E /* iOS */,
+				B93104F2CDF33CE022F143885F292C08 /* EasyGameCenter.swift */,
+				159685DF0EDBD6CB7E08C754709E4345 /* Support Files */,
+			);
+			path = EasyGameCenter;
+			sourceTree = "<group>";
+		};
+		159685DF0EDBD6CB7E08C754709E4345 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				427B381A9246A61D43BE819B3EF74A97 /* EasyGameCenter.modulemap */,
+				26DBB58E8A94921DB8018D36AB2AC704 /* EasyGameCenter.xcconfig */,
+				A4BAB63A5D2787B574371BCE9D72206F /* EasyGameCenter-dummy.m */,
+				A1FE21047B3B0175507E6C4D6291CCA1 /* EasyGameCenter-prefix.pch */,
+				AE301B101D507187A9721424457E9B5F /* EasyGameCenter-umbrella.h */,
+				2D6B8C4953E21B2055CC73CFAE7A4C7E /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/EasyGameCenter";
+			sourceTree = "<group>";
+		};
+		29082D3BE29B168DD44DED0FB97A1572 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				003666D143C457CAB44E7622B64E3F13 /* EasyGameCenter */,
+				813424F43C2A18B3A689914B180D7D92 /* Firebase */,
+				DECE26B4E9F15F16A93FB579B788AB79 /* SwiftGIF */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		672851E7A79DA74576D316E391F9CB6E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				38CF1F5B3334329854DDBFE06780B786 /* libFirebaseStatic.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3DD89E8CA9BE5EC108276D7843D24CF2 /* SwiftGIF */ = {
+		73CE608158358B4C19C3140542E5BC96 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				333DC939806FE0431B7BC0DF2A7EC218 /* SwiftGIF.swift */,
-				8BB60AC5E5E2E0AB85CEDA45FFE98868 /* Support Files */,
+				632227D2D87D1AC3F4F64BFD05A2C432 /* Firebase.modulemap */,
+				2913FA1948FAC58908C0C34969F57E74 /* Firebase.xcconfig */,
+				415939B1411A4BABDD817529664F6CCB /* Firebase-dummy.m */,
+				CE1D62160A710C549BA33CE19F132F93 /* Firebase-prefix.pch */,
+				B403003101F4279F283293B6B77F9194 /* Firebase-umbrella.h */,
+				9FFFA71B144E4C66628BE6CA34C37E10 /* Info.plist */,
 			);
-			path = SwiftGIF;
+			name = "Support Files";
+			path = "../Target Support Files/Firebase";
+			sourceTree = "<group>";
+		};
+		785553737B06AFC3DA711DDEB7D56194 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AE86F9F7FB95551E2E382CE53E75D823 /* iOS */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
-				14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */,
-				81F26828914F7FEE234996FBA8C15CA2 /* Pods */,
-				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
+				785553737B06AFC3DA711DDEB7D56194 /* Frameworks */,
+				29082D3BE29B168DD44DED0FB97A1572 /* Pods */,
+				A6E50F2EB9E334C133FEA509C5BA9AD1 /* Products */,
 				87C66FCF63EF98B00423453C0CCA7498 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		81F26828914F7FEE234996FBA8C15CA2 /* Pods */ = {
+		813424F43C2A18B3A689914B180D7D92 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
-				3DD89E8CA9BE5EC108276D7843D24CF2 /* SwiftGIF */,
+				242AE208B284E0930DD70DA10C6494A8 /* Empty.m */,
+				3327708463EB31469107B9BC07716974 /* FAuthData.h */,
+				F3AED4A24DE203AABF27B80387724DF0 /* FAuthType.h */,
+				DADD70C28677C782B5E94FB5252F621E /* FConfig.h */,
+				3DB48F7BAD2E9EC134239FFCDD510E08 /* FDataSnapshot.h */,
+				57119676BE444B310502579B9C33505F /* FEventType.h */,
+				F17E22E4582A5EDEA21493267D27D81A /* Firebase.h */,
+				6289E1263A34F8AB22ECF48038102751 /* FirebaseApp.h */,
+				C52B78C9CBF7E48DC0DDF85CA10A69A0 /* FirebaseServerValue.h */,
+				81986624EEB828D622E634C1CD0E0B8F /* FMutableData.h */,
+				F515FB85F98F488DABEF2AE04FD4487D /* FQuery.h */,
+				759D1EADA0BEC30256110A1B578E6A2E /* FTransactionResult.h */,
+				672851E7A79DA74576D316E391F9CB6E /* Frameworks */,
+				73CE608158358B4C19C3140542E5BC96 /* Support Files */,
 			);
-			name = Pods;
+			path = Firebase;
 			sourceTree = "<group>";
 		};
 		87C66FCF63EF98B00423453C0CCA7498 /* Targets Support Files */ = {
@@ -141,21 +289,6 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		8BB60AC5E5E2E0AB85CEDA45FFE98868 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				77F47F7B0A1265BB30913930FC0069AE /* Info.plist */,
-				52D2B44999F2D3A18500C2AC077195A9 /* SwiftGIF.modulemap */,
-				5F4AE64829DA5BF411B8DC513BE6A7E3 /* SwiftGIF.xcconfig */,
-				A53A4215AF6657817301ADF98A1CD4CD /* SwiftGIF-Private.xcconfig */,
-				C14060C18F25204D5D94BEADB67FDAD9 /* SwiftGIF-dummy.m */,
-				152F6ABB05E6037F4891DEE416D02668 /* SwiftGIF-prefix.pch */,
-				50EEB6BFE4B99677AC37AC538BC0E819 /* SwiftGIF-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftGIF";
-			sourceTree = "<group>";
-		};
 		A5EB8A53DE4AAA281358A5FF62AA251D /* Pods-TicTacSelfieApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,126 +296,162 @@
 				734E1CAB1BF07457FB0162E639CE99B3 /* Pods-TicTacSelfieApp.modulemap */,
 				962A2C15636A5CAE094C7D4A7D0BEC9F /* Pods-TicTacSelfieApp-acknowledgements.markdown */,
 				13B334BB52B5346C90A6503EB486FBAE /* Pods-TicTacSelfieApp-acknowledgements.plist */,
-				BF26C159A740F536A71AEC354E249CBF /* Pods-TicTacSelfieApp-dummy.m */,
+				73FB1DC761E8353343D99AE3722ADD35 /* Pods-TicTacSelfieApp-dummy.m */,
 				9501100D0A3A3B61C49C6C51F0E354C4 /* Pods-TicTacSelfieApp-frameworks.sh */,
 				1C2552DFEC61C283B2EE61B52C7A12F2 /* Pods-TicTacSelfieApp-resources.sh */,
-				B4FE42D473BE21EA75B6A3F0E880A5B5 /* Pods-TicTacSelfieApp-umbrella.h */,
-				4E2B02B57F9D7B50BABE69A8365D57E8 /* Pods-TicTacSelfieApp.debug.xcconfig */,
-				3BDB3E3CD0C8B7194119692B36A1DE24 /* Pods-TicTacSelfieApp.release.xcconfig */,
+				7774A73313A77F26D15ED8BAAA068789 /* Pods-TicTacSelfieApp-umbrella.h */,
+				98638A64EEAB9A4B80E139D809CD10E7 /* Pods-TicTacSelfieApp.debug.xcconfig */,
+				070DEF54AF7DC703D1CAB8B44B80C414 /* Pods-TicTacSelfieApp.release.xcconfig */,
 			);
 			name = "Pods-TicTacSelfieApp";
 			path = "Target Support Files/Pods-TicTacSelfieApp";
 			sourceTree = "<group>";
 		};
-		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
+		A6E50F2EB9E334C133FEA509C5BA9AD1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CD6E27405C9C13C2F6C82138E7346314 /* GifWriter.framework */,
-				7748A387E31F61F5FE3FECD49660DD31 /* Pods_TicTacSelfieApp.framework */,
-				959772FD4E5D7952F224885C2800FB75 /* SwiftGIF.bundle */,
-				408A17F4321B339CBA8DAF7599F7E474 /* SwiftGIF.framework */,
+				D55504B7348FA9898B44FB687CFE9E88 /* EasyGameCenter.framework */,
+				6BD830678F07A3224DDD3C68D770F87B /* Firebase.framework */,
+				4F28B52DE430855A235BC726A33888EB /* Pods_TicTacSelfieApp.framework */,
+				FDA2662C1FFE09491F8150662A609892 /* SwiftGIF.bundle */,
+				AFB8A50AD6D2DE7B90633311424F394D /* SwiftGIF.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EFAD2055552D2AD30FB7664412E47E6E /* iOS */ = {
+		AE86F9F7FB95551E2E382CE53E75D823 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				957CEF0148FE374DBB252EFE9BBE9D51 /* CFNetwork.framework */,
+				C0938AA4FE57E87F4D9C0DAE5C4F2F10 /* Foundation.framework */,
+				A6D2510B770C7F63B84B3A87D673B1EA /* GameKit.framework */,
+				FBFF7793F1D77630BF600AFC753ACE1A /* ImageIO.framework */,
+				2E5979948E6876093D4BE199922C4FF8 /* MobileCoreServices.framework */,
+				D95593D9AE4212570BD3D81E2B5E022F /* Security.framework */,
+				5BA3136AD0E133A8ADEBD5CC77E497DB /* SystemConfiguration.framework */,
+				222CE457F57AE8807FFC7AB308BAFFFC /* UIKit.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		B7B32F59DF2BEFAF0DC498D08E988D04 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6399230F310877A9AD8E85D11665F049 /* Info.plist */,
+				968450A96204FF99BB01CB8CA8F0CC0B /* SwiftGIF.modulemap */,
+				FBC7B9037FAD25361DAF0363C0217F08 /* SwiftGIF.xcconfig */,
+				2F26A7643DEC54FE091DFDC80CA3A520 /* SwiftGIF-dummy.m */,
+				B23D36A0FB23F2D7641AD80325886AE3 /* SwiftGIF-prefix.pch */,
+				F04A75983DB67347975FC7AC04BDFB73 /* SwiftGIF-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftGIF";
+			sourceTree = "<group>";
+		};
+		DECE26B4E9F15F16A93FB579B788AB79 /* SwiftGIF */ = {
+			isa = PBXGroup;
+			children = (
+				76ECEFFEC31C68333A50E878D735D321 /* SwiftGIF.swift */,
+				B7B32F59DF2BEFAF0DC498D08E988D04 /* Support Files */,
+			);
+			path = SwiftGIF;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		4B669607D8DDC4A64B6A078AE4B95AE8 /* Headers */ = {
+		2FDCAAB615C287D16BF7F1F2AA978246 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				532FA22DD2D2A3579813DC62A5AC526C /* Pods-TicTacSelfieApp-umbrella.h in Headers */,
+				C23FCF31260D47CEC1494A292DAA1A1E /* FAuthData.h in Headers */,
+				1D925BB011B04DDED982C7946571A67A /* FAuthType.h in Headers */,
+				E60FA42EEC3ECC48701DB55986D25D69 /* FConfig.h in Headers */,
+				E8B534D15D2B25919ACD898217266891 /* FDataSnapshot.h in Headers */,
+				239B10F388840841389B7F09648735B1 /* FEventType.h in Headers */,
+				60F9139BDD38565B78214C4FC5F5729D /* Firebase-umbrella.h in Headers */,
+				1C3EF85CD30E6FF2E51471BD5B3CEB29 /* Firebase.h in Headers */,
+				2F1496011DBBB75777645194AAAFE92D /* FirebaseApp.h in Headers */,
+				6646DA26298257396C7FFE141BB84CC3 /* FirebaseServerValue.h in Headers */,
+				DB05A9DD8244D10C28B6915C514AE15F /* FMutableData.h in Headers */,
+				4D75CF0089B20355B17A851513C4A002 /* FQuery.h in Headers */,
+				191DE2EB9A35585AE0A88BA9F833A1F4 /* FTransactionResult.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B866DEFB04E598E6F8658C0E15AC1D38 /* Headers */ = {
+		36F91D66B074DB7E5F9629D4B80FB198 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56A0A243F04918AE8738F0B02EC3B340 /* SwiftGIF-umbrella.h in Headers */,
+				6DEB04B56AAAE3415233F16A20CFDDF6 /* SwiftGIF-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D016E827E07AFAE2761B2EC878D5CEC9 /* Headers */ = {
+		8F5E3160F91BA3C8ECC8660BD7F97E23 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ECE1915A9BFE32834586BE742A7F451 /* Pods-TicTacSelfieApp-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEEE53317C857E333231E093BACBE059 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF699DD166A0120A313689387B9F43E1 /* EasyGameCenter-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		28CF070FD1FDA6D4396101988197F40C /* SwiftGIF */ = {
+		2F0EEC6883CB19E10F635DF4FF1C35A9 /* SwiftGIF */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 073687F37ECE6133A1F5A93432CD07A2 /* Build configuration list for PBXNativeTarget "SwiftGIF" */;
+			buildConfigurationList = 8DA914521A15F4280A64E4F5F63B1619 /* Build configuration list for PBXNativeTarget "SwiftGIF" */;
 			buildPhases = (
-				BB053B320B01AA238C11079B533ED1D7 /* Sources */,
-				705C087C52144A09BBCDB28856EE10AD /* Frameworks */,
-				861C40EEBD1E261BA4C621DE3DDE4DFA /* Resources */,
-				B866DEFB04E598E6F8658C0E15AC1D38 /* Headers */,
+				984871F209E75E37E12548FAB6639C0B /* Sources */,
+				A09C5AF310119C3ACBA6FE77B702E14B /* Frameworks */,
+				F4C4BE8520904BBD5B8F89F94A320373 /* Resources */,
+				36F91D66B074DB7E5F9629D4B80FB198 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				FA19C88AE81B4C5F05002D7EE34A9AD8 /* PBXTargetDependency */,
+				7B7010E94F21D303D3425441C811B11E /* PBXTargetDependency */,
 			);
 			name = SwiftGIF;
 			productName = SwiftGIF;
-			productReference = 408A17F4321B339CBA8DAF7599F7E474 /* SwiftGIF.framework */;
+			productReference = AFB8A50AD6D2DE7B90633311424F394D /* SwiftGIF.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		73CCE54D5DE1703E52C13ACAC8FA3810 /* GifWriter */ = {
+		8D31F4EA5CAA562DD42C0FF48EBF36D4 /* Pods-TicTacSelfieApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 43C14A1D0438A9F380F628DC0C7DDFCC /* Build configuration list for PBXNativeTarget "GifWriter" */;
+			buildConfigurationList = 098123D503E2D0ABCCF15CCA1E32A45B /* Build configuration list for PBXNativeTarget "Pods-TicTacSelfieApp" */;
 			buildPhases = (
-				D628EB98CDD39F98B69BE41907779A73 /* Sources */,
-				D0C6BF36FB4082E5CDA05B9EC9D1775D /* Frameworks */,
-				D016E827E07AFAE2761B2EC878D5CEC9 /* Headers */,
+				49808A3F3822F31568ED1CD9FB101300 /* Sources */,
+				6B5D8B4D6FB54F8C9A1BC5FF0F355EA1 /* Frameworks */,
+				8F5E3160F91BA3C8ECC8660BD7F97E23 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-			);
-			name = GifWriter;
-			productName = GifWriter;
-			productReference = CD6E27405C9C13C2F6C82138E7346314 /* GifWriter.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		73E4D5958CA695B2B68420B1A628EEC0 /* Pods-TicTacSelfieApp */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 44696D10BA5C7BA6B4E23053947933AB /* Build configuration list for PBXNativeTarget "Pods-TicTacSelfieApp" */;
-			buildPhases = (
-				1DDFBEA92AEA45CF8F61E3687FD50A36 /* Sources */,
-				F21E53B905CB581E6F40A829F03505DD /* Frameworks */,
-				4B669607D8DDC4A64B6A078AE4B95AE8 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A4A0EB13DF4FBB6C4D2AD712924DAEEF /* PBXTargetDependency */,
-				FC8B9138E5709F21AA0AA040227CC08C /* PBXTargetDependency */,
+				AEFFC7B5F8F3D7038D88A9A21C03D343 /* PBXTargetDependency */,
+				057CB3188D113198EB84E827B40A3455 /* PBXTargetDependency */,
+				5200E56E8CB5428AC45B406D40EE1925 /* PBXTargetDependency */,
 			);
 			name = "Pods-TicTacSelfieApp";
 			productName = "Pods-TicTacSelfieApp";
-			productReference = 7748A387E31F61F5FE3FECD49660DD31 /* Pods_TicTacSelfieApp.framework */;
+			productReference = 4F28B52DE430855A235BC726A33888EB /* Pods_TicTacSelfieApp.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		A0E95039F382F7D01A844ECE93CA1B0F /* SwiftGIF-SwiftGIF */ = {
+		ADB1D18FDF13AA6E80A21AFDCEA48F50 /* SwiftGIF-SwiftGIF */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 88A81A6F210668CACCE727CE3658291A /* Build configuration list for PBXNativeTarget "SwiftGIF-SwiftGIF" */;
+			buildConfigurationList = FDCCBA947D3E0A0C1D69086D208D3E57 /* Build configuration list for PBXNativeTarget "SwiftGIF-SwiftGIF" */;
 			buildPhases = (
-				59AB1FD1BB1BF0DC1FFC962157E9A4CB /* Sources */,
-				265FCE3AA8E2D1555F08B6BCA4C63812 /* Frameworks */,
-				D8AB16F2FEFD426713439D33BE3DBD6F /* Resources */,
+				2D7E95C6943E72F48F754A6D37D664D1 /* Sources */,
+				B052079F3FBC418563CF87B31106CCC7 /* Frameworks */,
+				19598AE3808C3A14C0978F06A6774DC2 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -290,8 +459,42 @@
 			);
 			name = "SwiftGIF-SwiftGIF";
 			productName = "SwiftGIF-SwiftGIF";
-			productReference = 959772FD4E5D7952F224885C2800FB75 /* SwiftGIF.bundle */;
+			productReference = FDA2662C1FFE09491F8150662A609892 /* SwiftGIF.bundle */;
 			productType = "com.apple.product-type.bundle";
+		};
+		B7AC9326D819482593FE118E915409D7 /* Firebase */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49B346C14D532324DCD14D0FA1347BC6 /* Build configuration list for PBXNativeTarget "Firebase" */;
+			buildPhases = (
+				46E052D320E3B778B76D8393E0BAFE0F /* Sources */,
+				A7E10F383DCD59079712A57B50DCF88E /* Frameworks */,
+				2FDCAAB615C287D16BF7F1F2AA978246 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Firebase;
+			productName = Firebase;
+			productReference = 6BD830678F07A3224DDD3C68D770F87B /* Firebase.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C86E879D2FB6A752C7C40AF50E7B7ACC /* EasyGameCenter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B8A8A74C55762683AEF8FAAACD83610 /* Build configuration list for PBXNativeTarget "EasyGameCenter" */;
+			buildPhases = (
+				FC4B4C24AC1AED9A9349C174B1BA2A40 /* Sources */,
+				9D536E16664126C10F6D697383E2481C /* Frameworks */,
+				DEEE53317C857E333231E093BACBE059 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EasyGameCenter;
+			productName = EasyGameCenter;
+			productReference = D55504B7348FA9898B44FB687CFE9E88 /* EasyGameCenter.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -310,95 +513,113 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = CCA510CFBEA2D207524CDA0D73C3B561 /* Products */;
+			productRefGroup = A6E50F2EB9E334C133FEA509C5BA9AD1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				73CCE54D5DE1703E52C13ACAC8FA3810 /* GifWriter */,
-				73E4D5958CA695B2B68420B1A628EEC0 /* Pods-TicTacSelfieApp */,
-				28CF070FD1FDA6D4396101988197F40C /* SwiftGIF */,
-				A0E95039F382F7D01A844ECE93CA1B0F /* SwiftGIF-SwiftGIF */,
+				C86E879D2FB6A752C7C40AF50E7B7ACC /* EasyGameCenter */,
+				B7AC9326D819482593FE118E915409D7 /* Firebase */,
+				8D31F4EA5CAA562DD42C0FF48EBF36D4 /* Pods-TicTacSelfieApp */,
+				2F0EEC6883CB19E10F635DF4FF1C35A9 /* SwiftGIF */,
+				ADB1D18FDF13AA6E80A21AFDCEA48F50 /* SwiftGIF-SwiftGIF */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		861C40EEBD1E261BA4C621DE3DDE4DFA /* Resources */ = {
+		19598AE3808C3A14C0978F06A6774DC2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0859819871E7BE06755A98F253F6B5F /* SwiftGIF.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D8AB16F2FEFD426713439D33BE3DBD6F /* Resources */ = {
+		F4C4BE8520904BBD5B8F89F94A320373 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4006C2F7F34946E7385B6A0294464D7B /* SwiftGIF.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1DDFBEA92AEA45CF8F61E3687FD50A36 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				109F7451F9619CD59378D1A9828AB958 /* Pods-TicTacSelfieApp-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		59AB1FD1BB1BF0DC1FFC962157E9A4CB /* Sources */ = {
+		2D7E95C6943E72F48F754A6D37D664D1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BB053B320B01AA238C11079B533ED1D7 /* Sources */ = {
+		46E052D320E3B778B76D8393E0BAFE0F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B097A2412882701C59007537E73BEF8B /* SwiftGIF-dummy.m in Sources */,
-				AD6BD9BEE5E371C00C7ADC3C1081064B /* SwiftGIF.swift in Sources */,
+				012A7E018F3D34F159894EBD7EACACF9 /* Empty.m in Sources */,
+				1D9D7FF5237C8CC91EF58DC45AC274FB /* Firebase-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D628EB98CDD39F98B69BE41907779A73 /* Sources */ = {
+		49808A3F3822F31568ED1CD9FB101300 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				083E27434D3775297E57907C6663B772 /* Pods-TicTacSelfieApp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		984871F209E75E37E12548FAB6639C0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE47B6D32630C2740F1248B0D2E45FA6 /* SwiftGIF-dummy.m in Sources */,
+				77107B921659BFDEF47E0CECB4837E64 /* SwiftGIF.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC4B4C24AC1AED9A9349C174B1BA2A40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BAB097A059AFB4E7AD71BB630720018 /* EasyGameCenter-dummy.m in Sources */,
+				6000AE915A6A44296DCE5798A5CB17F8 /* EasyGameCenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		A4A0EB13DF4FBB6C4D2AD712924DAEEF /* PBXTargetDependency */ = {
+		057CB3188D113198EB84E827B40A3455 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = GifWriter;
-			target = 73CCE54D5DE1703E52C13ACAC8FA3810 /* GifWriter */;
-			targetProxy = D1D45946C60573C0151C2D7917BFCE4B /* PBXContainerItemProxy */;
+			name = Firebase;
+			target = B7AC9326D819482593FE118E915409D7 /* Firebase */;
+			targetProxy = B0B26AEB6E8A1EA2425A21F9C8D722D3 /* PBXContainerItemProxy */;
 		};
-		FA19C88AE81B4C5F05002D7EE34A9AD8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "SwiftGIF-SwiftGIF";
-			target = A0E95039F382F7D01A844ECE93CA1B0F /* SwiftGIF-SwiftGIF */;
-			targetProxy = C03C4D29798E81E0338DEC19C3428442 /* PBXContainerItemProxy */;
-		};
-		FC8B9138E5709F21AA0AA040227CC08C /* PBXTargetDependency */ = {
+		5200E56E8CB5428AC45B406D40EE1925 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftGIF;
-			target = 28CF070FD1FDA6D4396101988197F40C /* SwiftGIF */;
-			targetProxy = 41C3EA73F349947CA421E7691D8688ED /* PBXContainerItemProxy */;
+			target = 2F0EEC6883CB19E10F635DF4FF1C35A9 /* SwiftGIF */;
+			targetProxy = 2870AF16E0BADAFE7635AC68C4A5AD34 /* PBXContainerItemProxy */;
+		};
+		7B7010E94F21D303D3425441C811B11E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SwiftGIF-SwiftGIF";
+			target = ADB1D18FDF13AA6E80A21AFDCEA48F50 /* SwiftGIF-SwiftGIF */;
+			targetProxy = 53EAEDAC4527C425ED35BBC9B7CA1A85 /* PBXContainerItemProxy */;
+		};
+		AEFFC7B5F8F3D7038D88A9A21C03D343 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = EasyGameCenter;
+			target = C86E879D2FB6A752C7C40AF50E7B7ACC /* EasyGameCenter */;
+			targetProxy = 93932E935C0614DC11BCC28310C05FB8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		068E18B62AFD268AC5AE65F426ABE21B /* Debug */ = {
+		18F3888F1EF4F9D0286CD70343A58083 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A53A4215AF6657817301ADF98A1CD4CD /* SwiftGIF-Private.xcconfig */;
+			baseConfigurationReference = FBC7B9037FAD25361DAF0363C0217F08 /* SwiftGIF.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				PRODUCT_NAME = SwiftGIF;
@@ -408,15 +629,42 @@
 			};
 			name = Debug;
 		};
-		134736EEB1D3FFF5A1A9327D7BD893C1 /* Release */ = {
+		1B052FFDEEB9D253860AD169D3BD0DD1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A53A4215AF6657817301ADF98A1CD4CD /* SwiftGIF-Private.xcconfig */;
+			baseConfigurationReference = 26DBB58E8A94921DB8018D36AB2AC704 /* EasyGameCenter.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 0.1.0;
+				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 0.1.0;
-				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/EasyGameCenter/EasyGameCenter-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EasyGameCenter/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/EasyGameCenter/EasyGameCenter.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = EasyGameCenter;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		287C93716025505334E9C7170D9BCECD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBC7B9037FAD25361DAF0363C0217F08 /* SwiftGIF.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/SwiftGIF/SwiftGIF-prefix.pch";
@@ -434,6 +682,61 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		3C10E5AF5D555F1787644D164909A872 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2913FA1948FAC58908C0C34969F57E74 /* Firebase.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Firebase/Firebase-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Firebase/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Firebase/Firebase.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Firebase;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3C1DEC2A25BC84FA5060ABD6BCFF82F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26DBB58E8A94921DB8018D36AB2AC704 /* EasyGameCenter.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/EasyGameCenter/EasyGameCenter-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EasyGameCenter/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/EasyGameCenter/EasyGameCenter.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = EasyGameCenter;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		511103F7F15A7E8F83B268EA03462CAB /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -469,15 +772,15 @@
 			};
 			name = Release;
 		};
-		5419D3BA34028C29289EDD5D8B6765FA /* Debug */ = {
+		68EBD904CF743F0939C392E0D2B4F372 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A53A4215AF6657817301ADF98A1CD4CD /* SwiftGIF-Private.xcconfig */;
+			baseConfigurationReference = FBC7B9037FAD25361DAF0363C0217F08 /* SwiftGIF.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 0.1.0;
+				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 0.1.0;
-				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/SwiftGIF/SwiftGIF-prefix.pch";
@@ -497,17 +800,32 @@
 			};
 			name = Debug;
 		};
-		A64982E694E9DD4ADADE001BDE1AD081 /* Release */ = {
+		82769E035F65D540A64A3DE978496EAC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A53A4215AF6657817301ADF98A1CD4CD /* SwiftGIF-Private.xcconfig */;
+			baseConfigurationReference = 2913FA1948FAC58908C0C34969F57E74 /* Firebase.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = SwiftGIF;
+				GCC_PREFIX_HEADER = "Target Support Files/Firebase/Firebase-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Firebase/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Firebase/Firebase.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Firebase;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		AA05AF9C3A14EE0E32F42C6E6D42D34F /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -548,36 +866,9 @@
 			};
 			name = Debug;
 		};
-		AA35EDD46CCA8D36B4BBF7C639B16353 /* Debug */ = {
+		CD4527F4DF270F7007F624AA919BD319 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1.0.0;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/GifWriter/GifWriter-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/GifWriter/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/GifWriter/GifWriter.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = GifWriter;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		C0C59BC2B329F3B61C6CD83BA5AD5586 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3BDB3E3CD0C8B7194119692B36A1DE24 /* Pods-TicTacSelfieApp.release.xcconfig */;
+			baseConfigurationReference = 98638A64EEAB9A4B80E139D809CD10E7 /* Pods-TicTacSelfieApp.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -590,61 +881,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-TicTacSelfieApp/Pods-TicTacSelfieApp.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_TicTacSelfieApp;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		CDE0B49BD844290DDB92EA059B4D1FA5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1.0.0;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/GifWriter/GifWriter-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/GifWriter/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/GifWriter/GifWriter.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = GifWriter;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		EA994B55C838FCEDBEF78B093064FE22 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4E2B02B57F9D7B50BABE69A8365D57E8 /* Pods-TicTacSelfieApp.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-TicTacSelfieApp/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-TicTacSelfieApp/Pods-TicTacSelfieApp.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
@@ -659,15 +896,57 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		DA1C326BA9B699B82598FB5678C5557B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 070DEF54AF7DC703D1CAB8B44B80C414 /* Pods-TicTacSelfieApp.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TicTacSelfieApp/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TicTacSelfieApp/Pods-TicTacSelfieApp.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_TicTacSelfieApp;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E2F121427AA32F9BDFE143A22A1C28BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBC7B9037FAD25361DAF0363C0217F08 /* SwiftGIF.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = SwiftGIF;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		073687F37ECE6133A1F5A93432CD07A2 /* Build configuration list for PBXNativeTarget "SwiftGIF" */ = {
+		098123D503E2D0ABCCF15CCA1E32A45B /* Build configuration list for PBXNativeTarget "Pods-TicTacSelfieApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5419D3BA34028C29289EDD5D8B6765FA /* Debug */,
-				134736EEB1D3FFF5A1A9327D7BD893C1 /* Release */,
+				CD4527F4DF270F7007F624AA919BD319 /* Debug */,
+				DA1C326BA9B699B82598FB5678C5557B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -681,29 +960,38 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		43C14A1D0438A9F380F628DC0C7DDFCC /* Build configuration list for PBXNativeTarget "GifWriter" */ = {
+		3B8A8A74C55762683AEF8FAAACD83610 /* Build configuration list for PBXNativeTarget "EasyGameCenter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AA35EDD46CCA8D36B4BBF7C639B16353 /* Debug */,
-				CDE0B49BD844290DDB92EA059B4D1FA5 /* Release */,
+				3C1DEC2A25BC84FA5060ABD6BCFF82F5 /* Debug */,
+				1B052FFDEEB9D253860AD169D3BD0DD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		44696D10BA5C7BA6B4E23053947933AB /* Build configuration list for PBXNativeTarget "Pods-TicTacSelfieApp" */ = {
+		49B346C14D532324DCD14D0FA1347BC6 /* Build configuration list for PBXNativeTarget "Firebase" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EA994B55C838FCEDBEF78B093064FE22 /* Debug */,
-				C0C59BC2B329F3B61C6CD83BA5AD5586 /* Release */,
+				82769E035F65D540A64A3DE978496EAC /* Debug */,
+				3C10E5AF5D555F1787644D164909A872 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		88A81A6F210668CACCE727CE3658291A /* Build configuration list for PBXNativeTarget "SwiftGIF-SwiftGIF" */ = {
+		8DA914521A15F4280A64E4F5F63B1619 /* Build configuration list for PBXNativeTarget "SwiftGIF" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				068E18B62AFD268AC5AE65F426ABE21B /* Debug */,
-				A64982E694E9DD4ADADE001BDE1AD081 /* Release */,
+				68EBD904CF743F0939C392E0D2B4F372 /* Debug */,
+				287C93716025505334E9C7170D9BCECD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDCCBA947D3E0A0C1D69086D208D3E57 /* Build configuration list for PBXNativeTarget "SwiftGIF-SwiftGIF" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18F3888F1EF4F9D0286CD70343A58083 /* Debug */,
+				E2F121427AA32F9BDFE143A22A1C28BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

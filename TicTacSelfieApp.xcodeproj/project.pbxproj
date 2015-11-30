@@ -338,7 +338,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../../../Pods/Target Support Files/Pods-TicTacSelfieApp/Pods-TicTacSelfieApp-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TicTacSelfieApp/Pods-TicTacSelfieApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		245590ACD5D049D4B6BA7FB8 /* Embed Pods Frameworks */ = {
