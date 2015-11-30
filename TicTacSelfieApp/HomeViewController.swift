@@ -9,12 +9,13 @@
 import UIKit
 import AVFoundation
 import GameKit
-
+import Firebase
 
 class CameraViewController: UIViewController, GKTurnBasedMatchmakerViewControllerDelegate {
   
   var audioPlayer = AVAudioPlayer()
   var gcEnabled = Bool()
+  let myRootRef = Firebase(url:"https://tictacselfie.firebaseio.com")
   
   var localPlayer: GKLocalPlayer = GKLocalPlayer.localPlayer()
   
@@ -68,6 +69,21 @@ class CameraViewController: UIViewController, GKTurnBasedMatchmakerViewControlle
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
+  }
+  
+  @IBAction func testServer(sender: AnyObject) {
+    // Create a reference to a Firebase location
+    // Write data to Firebase
+    myRootRef.setValue("hello nancy")
+    print(myRootRef)
+  }
+  
+  @IBAction func writeToServer(sender: AnyObject) {
+    // Read data and react to changes
+    myRootRef.observeEventType(.Value, withBlock: {
+      snapshot in
+      print("\(snapshot.key) -> \(snapshot.value)")
+    })
   }
     
   @IBAction func startMultiplayer(sender: AnyObject) {
