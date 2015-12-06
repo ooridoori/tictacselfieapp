@@ -31,101 +31,109 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PASS AND PLAY!  WINNER GETS A SURPRISE." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Tjq-hi-jaB">
-                                <rect key="frame" x="59" y="356" width="257" height="49"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GEY-oT-QPl">
+                                <rect key="frame" x="78" y="509" width="220" height="32"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="zOQ-Sh-vph"/>
+                                </constraints>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gp1-j4-SKi"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NNd-YL-8l6">
+                                <rect key="frame" x="79" y="433" width="219" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tictaclogo" translatesAutoresizingMaskIntoConstraints="NO" id="jtk-26-p2t">
+                                <rect key="frame" x="20" y="53" width="337" height="305"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="305" id="5UR-48-kew"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play Online!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="ffs-UH-LCL">
+                                <rect key="frame" x="61" y="400" width="241" height="25"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="BrandonGrotesque-Medium" family="Brandon Grotesque" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFT-9k-5ny">
-                                <rect key="frame" x="71" y="439" width="214" height="38"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p5R-Gs-AHC">
+                                <rect key="frame" x="79" y="549" width="219" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Sign up"/>
+                                <connections>
+                                    <action selector="signUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Zn-08-doZ"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YGJ-MY-2cr">
+                                <rect key="frame" x="78" y="471" width="219" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kg4-fq-gg7">
+                                <rect key="frame" x="70" y="361" width="232" height="38"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="BrandonGrotesque-Medium" family="Brandon Grotesque" pointSize="18"/>
-                                <state key="normal" title="Pass and play!"/>
+                                <state key="normal" title="Pass &amp; play!"/>
                                 <connections>
-                                    <action selector="playGameSound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YOZ-gZ-Jez"/>
-                                    <segue destination="iVd-Jw-Tpv" kind="presentation" id="LWZ-ab-tIy"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tictaclogo" translatesAutoresizingMaskIntoConstraints="NO" id="jtk-26-p2t">
-                                <rect key="frame" x="19" y="50" width="337" height="305"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="305" id="htz-zb-hBh"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDL-eT-cHx">
-                                <rect key="frame" x="119" y="526" width="119" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Multiplayer mode"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnT-yd-cT5">
-                                <rect key="frame" x="119" y="526" width="119" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Multiplayer mode"/>
-                                <connections>
-                                    <action selector="startMultiplayer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LBi-QJ-EUl"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kdl-Yp-lMM">
-                                <rect key="frame" x="120" y="485" width="118" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Write server data"/>
-                                <connections>
-                                    <action selector="testServer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hw7-uz-OpI"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RoY-Fu-Co3">
-                                <rect key="frame" x="120" y="564" width="116" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Read server data"/>
-                                <connections>
-                                    <action selector="writeToServer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rdg-am-llr"/>
+                                    <action selector="playGameSound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aef-Xa-HCz"/>
                                 </connections>
                             </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Tjq-hi-jaB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="59" id="2wv-3F-gqS"/>
-                            <constraint firstAttribute="centerX" secondItem="jFT-9k-5ny" secondAttribute="centerX" constant="9.5" id="34q-Qi-4pP"/>
-                            <constraint firstItem="jFT-9k-5ny" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="71" id="IbO-SM-yp1"/>
-                            <constraint firstItem="jFT-9k-5ny" firstAttribute="top" secondItem="Tjq-hi-jaB" secondAttribute="bottom" constant="18" id="JjP-p5-8pf"/>
-                            <constraint firstItem="Tjq-hi-jaB" firstAttribute="top" secondItem="jtk-26-p2t" secondAttribute="bottom" constant="17" id="MgD-ba-LmP"/>
-                            <constraint firstItem="jtk-26-p2t" firstAttribute="top" secondItem="lkN-Kf-w0Z" secondAttribute="bottom" constant="30" id="OFY-cg-LZp"/>
-                            <constraint firstItem="Tjq-hi-jaB" firstAttribute="leading" secondItem="lkN-Kf-w0Z" secondAttribute="trailing" constant="-316" id="PxY-cr-H7H"/>
-                            <constraint firstItem="jtk-26-p2t" firstAttribute="top" secondItem="lkN-Kf-w0Z" secondAttribute="bottom" constant="30" id="RCQ-5M-j6b"/>
+                            <constraint firstItem="kg4-fq-gg7" firstAttribute="top" secondItem="jtk-26-p2t" secondAttribute="bottom" constant="3" id="2BE-3e-3GL"/>
+                            <constraint firstItem="ffs-UH-LCL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="45" id="3Xt-IW-w4i"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="p5R-Gs-AHC" secondAttribute="trailing" constant="61" id="3va-RQ-JCZ"/>
+                            <constraint firstItem="kg4-fq-gg7" firstAttribute="trailing" secondItem="ffs-UH-LCL" secondAttribute="trailing" id="4Sc-Bp-71w"/>
+                            <constraint firstItem="jtk-26-p2t" firstAttribute="top" secondItem="lkN-Kf-w0Z" secondAttribute="bottom" constant="33" id="8JW-ng-be9"/>
+                            <constraint firstItem="YGJ-MY-2cr" firstAttribute="top" secondItem="NNd-YL-8l6" secondAttribute="bottom" constant="8" symbolic="YES" id="Cf0-qY-lYL"/>
+                            <constraint firstItem="jtk-26-p2t" firstAttribute="centerX" secondItem="NNd-YL-8l6" secondAttribute="centerX" id="Jgi-Wh-XmF"/>
+                            <constraint firstItem="kg4-fq-gg7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="54" id="MmB-6j-oEI"/>
+                            <constraint firstItem="p5R-Gs-AHC" firstAttribute="top" secondItem="GEY-oT-QPl" secondAttribute="bottom" constant="8" symbolic="YES" id="ReD-Jq-qsa"/>
                             <constraint firstAttribute="centerY" secondItem="jtk-26-p2t" secondAttribute="centerY" constant="131" id="S04-kU-W5X"/>
-                            <constraint firstItem="Tjq-hi-jaB" firstAttribute="top" secondItem="jtk-26-p2t" secondAttribute="bottom" constant="17" id="Tef-cU-kkU"/>
-                            <constraint firstAttribute="trailing" secondItem="Tjq-hi-jaB" secondAttribute="trailing" constant="59" id="VND-yK-HV1"/>
-                            <constraint firstAttribute="width" secondItem="jtk-26-p2t" secondAttribute="height" multiplier="75:61" id="b8t-YB-9CA"/>
-                            <constraint firstItem="EO6-5I-quG" firstAttribute="top" secondItem="Tjq-hi-jaB" secondAttribute="bottom" constant="233" id="b9o-SE-aK7"/>
-                            <constraint firstAttribute="centerX" secondItem="Tjq-hi-jaB" secondAttribute="centerX" id="gjb-ef-Edy"/>
-                            <constraint firstItem="jtk-26-p2t" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="3" id="hua-y9-0Za"/>
-                            <constraint firstAttribute="trailing" secondItem="jFT-9k-5ny" secondAttribute="trailing" constant="90" id="ppU-Nr-alC"/>
-                            <constraint firstAttribute="trailing" secondItem="jtk-26-p2t" secondAttribute="trailing" constant="19" id="qao-8N-F2d"/>
-                            <constraint firstItem="Tjq-hi-jaB" firstAttribute="top" secondItem="jtk-26-p2t" secondAttribute="bottom" constant="1" id="urF-yo-CX2"/>
-                            <constraint firstAttribute="centerY" secondItem="Tjq-hi-jaB" secondAttribute="centerY" constant="-69.5" id="wzu-mP-P69"/>
-                            <constraint firstItem="jtk-26-p2t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yX5-WI-NI0"/>
-                            <constraint firstItem="jFT-9k-5ny" firstAttribute="top" secondItem="Tjq-hi-jaB" secondAttribute="bottom" constant="34" id="zXM-9a-yHz"/>
+                            <constraint firstItem="p5R-Gs-AHC" firstAttribute="centerX" secondItem="GEY-oT-QPl" secondAttribute="centerX" id="aJk-Ef-agc"/>
+                            <constraint firstItem="ffs-UH-LCL" firstAttribute="top" secondItem="kg4-fq-gg7" secondAttribute="bottom" constant="1" id="agh-4p-pxI"/>
+                            <constraint firstItem="YGJ-MY-2cr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="62" id="bGV-Ob-SZx"/>
+                            <constraint firstItem="jtk-26-p2t" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="cmA-3t-yvY"/>
+                            <constraint firstItem="GEY-oT-QPl" firstAttribute="trailing" secondItem="NNd-YL-8l6" secondAttribute="trailing" id="dfu-JY-bV0"/>
+                            <constraint firstItem="p5R-Gs-AHC" firstAttribute="leading" secondItem="NNd-YL-8l6" secondAttribute="leading" id="eFd-5U-nws"/>
+                            <constraint firstItem="jtk-26-p2t" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="hua-y9-0Za"/>
+                            <constraint firstAttribute="trailing" secondItem="jtk-26-p2t" secondAttribute="trailing" constant="18" id="qao-8N-F2d"/>
+                            <constraint firstItem="p5R-Gs-AHC" firstAttribute="trailing" secondItem="GEY-oT-QPl" secondAttribute="trailing" id="qgS-Rf-Ecb"/>
+                            <constraint firstItem="GEY-oT-QPl" firstAttribute="top" secondItem="YGJ-MY-2cr" secondAttribute="bottom" constant="8" symbolic="YES" id="sCF-pq-9EM"/>
+                            <constraint firstItem="NNd-YL-8l6" firstAttribute="top" secondItem="ffs-UH-LCL" secondAttribute="bottom" constant="8" symbolic="YES" id="vb2-CC-oBF"/>
+                            <constraint firstItem="YGJ-MY-2cr" firstAttribute="leading" secondItem="GEY-oT-QPl" secondAttribute="leading" id="yPo-zc-Iwn"/>
+                            <constraint firstItem="jtk-26-p2t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="1" id="yX5-WI-NI0"/>
+                            <constraint firstItem="YGJ-MY-2cr" firstAttribute="centerX" secondItem="GEY-oT-QPl" secondAttribute="centerX" id="ydX-eE-buM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ffs-UH-LCL" secondAttribute="trailing" constant="57" id="z8g-uu-E0x"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="S04-kU-W5X"/>
-                                <exclude reference="MgD-ba-LmP"/>
-                                <exclude reference="Tef-cU-kkU"/>
-                                <exclude reference="wzu-mP-P69"/>
-                                <exclude reference="JjP-p5-8pf"/>
-                                <exclude reference="b9o-SE-aK7"/>
+                                <exclude reference="hua-y9-0Za"/>
+                                <exclude reference="qao-8N-F2d"/>
+                                <exclude reference="yX5-WI-NI0"/>
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="2wv-fs-zyO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="emailTF" destination="NNd-YL-8l6" id="ASm-xu-W6j"/>
+                        <outlet property="passwordTF" destination="YGJ-MY-2cr" id="RHJ-yt-TwD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="348.5" y="275.5"/>
+            <point key="canvasLocation" x="1160.5" y="275.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="4tL-iV-feK">
@@ -350,7 +358,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RBB-k2-M7n" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="DqG-Ig-c3y"/>
             </objects>
-            <point key="canvasLocation" x="829.5" y="270.5"/>
+            <point key="canvasLocation" x="1641.5" y="270.5"/>
         </scene>
         <!--Winners Page View Controller-->
         <scene sceneID="Ofh-fC-8GB">
@@ -433,14 +441,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IAd-Hl-FCF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1284.5" y="275.5"/>
+            <point key="canvasLocation" x="2096.5" y="275.5"/>
         </scene>
     </scenes>
     <resources>
         <image name="field" width="320" height="503"/>
         <image name="tictaclogo" width="476" height="476"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="LWZ-ab-tIy"/>
-    </inferredMetricsTieBreakers>
 </document>

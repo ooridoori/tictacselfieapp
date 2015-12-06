@@ -4,30 +4,53 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>EasyGameCenter.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>Firebase.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
 		<key>GifWriter.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 		<key>Pods-TicTacSelfieApp.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 		<key>SwiftGIF-SwiftGIF.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>4</integer>
 		</dict>
 		<key>SwiftGIF.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>3</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>28CF070FD1FDA6D4396101988197F40C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2F0EEC6883CB19E10F635DF4FF1C35A9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,7 +65,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>8D31F4EA5CAA562DD42C0FF48EBF36D4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>A0E95039F382F7D01A844ECE93CA1B0F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ADB1D18FDF13AA6E80A21AFDCEA48F50</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B7AC9326D819482593FE118E915409D7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C86E879D2FB6A752C7C40AF50E7B7ACC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

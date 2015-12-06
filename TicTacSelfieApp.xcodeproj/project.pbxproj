@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		5A394C85EE746AAD26978057 /* Pods_TicTacSelfieApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A62A54F29DD8A498AD7C6D34 /* Pods_TicTacSelfieApp.framework */; };
 		B92AD6891B9906650004538E /* Brandon_med.otf in Resources */ = {isa = PBXBuildFile; fileRef = B92AD6881B98F3850004538E /* Brandon_med.otf */; };
-		B92AD6931B997CED0004538E /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92AD6921B997CED0004538E /* GameViewController.swift */; };
 		B92FFD5D1B8D3EB50089EC0D /* PlayersImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92FFD5C1B8D3EB50089EC0D /* PlayersImages.swift */; };
 		B92FFD5F1B8D3EE30089EC0D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92FFD5E1B8D3EE30089EC0D /* HomeViewController.swift */; };
 		B92FFD611B8D3EEE0089EC0D /* WinnersPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92FFD601B8D3EEE0089EC0D /* WinnersPageViewController.swift */; };
@@ -18,6 +17,7 @@
 		B9587F791B93FC22000839C8 /* meow.wav in Resources */ = {isa = PBXBuildFile; fileRef = B9587F781B93FC22000839C8 /* meow.wav */; };
 		B9587F7B1B9401FB000839C8 /* dougie.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9587F7A1B9401FB000839C8 /* dougie.mp3 */; };
 		B9587F7D1B94049B000839C8 /* blop.wav in Resources */ = {isa = PBXBuildFile; fileRef = B9587F7C1B94049B000839C8 /* blop.wav */; };
+		B97261C81C139E9A00DF7512 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97261C71C139E9A00DF7512 /* Match.swift */; };
 		B97284391B92A3AC00BED149 /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97284381B92A3AC00BED149 /* Sounds.swift */; };
 		B98BAB261B8C3D03005196B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98BAB251B8C3D03005196B8 /* AppDelegate.swift */; };
 		B98BAB281B8C3D03005196B8 /* GridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98BAB271B8C3D03005196B8 /* GridViewController.swift */; };
@@ -50,7 +50,6 @@
 		8A223173D0C792A3DBFC4193 /* Pods-TicTacSelfieApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicTacSelfieApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TicTacSelfieApp/Pods-TicTacSelfieApp.release.xcconfig"; sourceTree = "<group>"; };
 		A62A54F29DD8A498AD7C6D34 /* Pods_TicTacSelfieApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TicTacSelfieApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B92AD6881B98F3850004538E /* Brandon_med.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brandon_med.otf; sourceTree = "<group>"; };
-		B92AD6921B997CED0004538E /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		B92FFD5C1B8D3EB50089EC0D /* PlayersImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersImages.swift; sourceTree = "<group>"; };
 		B92FFD5E1B8D3EE30089EC0D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B92FFD601B8D3EEE0089EC0D /* WinnersPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinnersPageViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +60,7 @@
 		B9587F7C1B94049B000839C8 /* blop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blop.wav; sourceTree = "<group>"; };
 		B962EC3D1BCDC43F00151FFE /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		B962EC3F1BCDC44F00151FFE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B97261C71C139E9A00DF7512 /* Match.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		B97284381B92A3AC00BED149 /* Sounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
 		B98BAB201B8C3D03005196B8 /* TicTacSelfieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacSelfieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B98BAB241B8C3D03005196B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -110,6 +110,43 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B97261C31C139B9E00DF7512 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B92FFD5C1B8D3EB50089EC0D /* PlayersImages.swift */,
+				B97261C71C139E9A00DF7512 /* Match.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		B97261C41C139BAF00DF7512 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B92FFD5E1B8D3EE30089EC0D /* HomeViewController.swift */,
+				B98BAB271B8C3D03005196B8 /* GridViewController.swift */,
+				B92FFD601B8D3EEE0089EC0D /* WinnersPageViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		B97261C51C139BBA00DF7512 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				B98BAB291B8C3D03005196B8 /* Main.storyboard */,
+				B98BAB2E1B8C3D03005196B8 /* LaunchScreen.xib */,
+			);
+			name = Layouts;
+			sourceTree = "<group>";
+		};
+		B97261C61C139C1100DF7512 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				B98BAB251B8C3D03005196B8 /* AppDelegate.swift */,
+				B97284381B92A3AC00BED149 /* Sounds.swift */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
 		B98BAB171B8C3D03005196B8 = {
 			isa = PBXGroup;
 			children = (
@@ -133,18 +170,13 @@
 		B98BAB221B8C3D03005196B8 /* TicTacSelfieApp */ = {
 			isa = PBXGroup;
 			children = (
-				B98BAB251B8C3D03005196B8 /* AppDelegate.swift */,
-				B92FFD5E1B8D3EE30089EC0D /* HomeViewController.swift */,
-				B92AD6921B997CED0004538E /* GameViewController.swift */,
-				B92FFD5C1B8D3EB50089EC0D /* PlayersImages.swift */,
-				B97284381B92A3AC00BED149 /* Sounds.swift */,
-				B98BAB271B8C3D03005196B8 /* GridViewController.swift */,
-				B92FFD601B8D3EEE0089EC0D /* WinnersPageViewController.swift */,
-				B98BAB291B8C3D03005196B8 /* Main.storyboard */,
-				B98BAB2E1B8C3D03005196B8 /* LaunchScreen.xib */,
-				B98BAB2C1B8C3D03005196B8 /* Images.xcassets */,
+				B97261C31C139B9E00DF7512 /* Models */,
+				B97261C41C139BAF00DF7512 /* Controllers */,
+				B97261C51C139BBA00DF7512 /* Layouts */,
+				B97261C61C139C1100DF7512 /* Other */,
 				B9D5058F1BF402ED009451A4 /* Sounds */,
 				B9ADE9F81B982118009FE853 /* Fonts */,
+				B98BAB2C1B8C3D03005196B8 /* Images.xcassets */,
 				B98BAB231B8C3D03005196B8 /* Supporting Files */,
 			);
 			path = TicTacSelfieApp;
@@ -378,13 +410,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B92AD6931B997CED0004538E /* GameViewController.swift in Sources */,
 				B92FFD5D1B8D3EB50089EC0D /* PlayersImages.swift in Sources */,
 				B92FFD5F1B8D3EE30089EC0D /* HomeViewController.swift in Sources */,
 				B92FFD611B8D3EEE0089EC0D /* WinnersPageViewController.swift in Sources */,
 				B98BAB281B8C3D03005196B8 /* GridViewController.swift in Sources */,
 				B98BAB261B8C3D03005196B8 /* AppDelegate.swift in Sources */,
 				B97284391B92A3AC00BED149 /* Sounds.swift in Sources */,
+				B97261C81C139E9A00DF7512 /* Match.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
