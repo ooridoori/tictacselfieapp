@@ -18,6 +18,7 @@
 		B9587F7B1B9401FB000839C8 /* dougie.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9587F7A1B9401FB000839C8 /* dougie.mp3 */; };
 		B9587F7D1B94049B000839C8 /* blop.wav in Resources */ = {isa = PBXBuildFile; fileRef = B9587F7C1B94049B000839C8 /* blop.wav */; };
 		B97261C81C139E9A00DF7512 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97261C71C139E9A00DF7512 /* Match.swift */; };
+		B97261CA1C1B90EE00DF7512 /* OnlineUsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97261C91C1B90EE00DF7512 /* OnlineUsersTableViewController.swift */; };
 		B97284391B92A3AC00BED149 /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97284381B92A3AC00BED149 /* Sounds.swift */; };
 		B98BAB261B8C3D03005196B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98BAB251B8C3D03005196B8 /* AppDelegate.swift */; };
 		B98BAB281B8C3D03005196B8 /* GridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98BAB271B8C3D03005196B8 /* GridViewController.swift */; };
@@ -61,6 +62,7 @@
 		B962EC3D1BCDC43F00151FFE /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		B962EC3F1BCDC44F00151FFE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		B97261C71C139E9A00DF7512 /* Match.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		B97261C91C1B90EE00DF7512 /* OnlineUsersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnlineUsersTableViewController.swift; sourceTree = "<group>"; };
 		B97284381B92A3AC00BED149 /* Sounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
 		B98BAB201B8C3D03005196B8 /* TicTacSelfieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacSelfieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B98BAB241B8C3D03005196B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				B92FFD5E1B8D3EE30089EC0D /* HomeViewController.swift */,
+				B97261C91C1B90EE00DF7512 /* OnlineUsersTableViewController.swift */,
 				B98BAB271B8C3D03005196B8 /* GridViewController.swift */,
 				B92FFD601B8D3EEE0089EC0D /* WinnersPageViewController.swift */,
 			);
@@ -415,6 +418,7 @@
 				B92FFD611B8D3EEE0089EC0D /* WinnersPageViewController.swift in Sources */,
 				B98BAB281B8C3D03005196B8 /* GridViewController.swift in Sources */,
 				B98BAB261B8C3D03005196B8 /* AppDelegate.swift in Sources */,
+				B97261CA1C1B90EE00DF7512 /* OnlineUsersTableViewController.swift in Sources */,
 				B97284391B92A3AC00BED149 /* Sounds.swift in Sources */,
 				B97261C81C139E9A00DF7512 /* Match.swift in Sources */,
 			);
@@ -495,7 +499,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MACH_O_TYPE = mh_execute;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -534,7 +539,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MACH_O_TYPE = mh_execute;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -572,16 +578,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = TicTacSelfieAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = mh_bundle;
 				PRODUCT_BUNDLE_IDENTIFIER = "Mob3.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TicTacSelfieApp.app/TicTacSelfieApp";
@@ -592,12 +596,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = TicTacSelfieAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = mh_bundle;
 				PRODUCT_BUNDLE_IDENTIFIER = "Mob3.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TicTacSelfieApp.app/TicTacSelfieApp";

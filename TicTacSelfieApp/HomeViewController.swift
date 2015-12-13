@@ -12,7 +12,7 @@ import GameKit
 import Firebase
 import QuartzCore
 
-class CameraViewController: UIViewController {
+class HomeViewController: UIViewController {
   
   var audioPlayer = AVAudioPlayer()
   var gcEnabled = Bool()
@@ -20,77 +20,12 @@ class CameraViewController: UIViewController {
   let loginToList = "loginToList"
   let ref = Firebase(url:"https://tictacselfie.firebaseio.com")
   
-  @IBOutlet var emailTF: UITextField!
-  @IBOutlet var passwordTF: UITextField!
+ 
+  @IBOutlet var email: UITextField!
   
-//  var localPlayer: GKLocalPlayer = GKLocalPlayer.localPlayer()
-//  
-//  func authenticateLocalPlayer(){
-//       localPlayer.authenticateHandler = {(ViewController,error) -> Void in
-//      if ((ViewController) != nil) {
-//        self.presentViewController(ViewController!, animated: true, completion: nil)
-//      } else if (self.localPlayer.authenticated) {
-//        print("local player authenticated")
-//        self.gcEnabled = true
-//        
-//        print("am i authenticated?????", self.localPlayer)
-//        
-//        let matchRequest = GKMatchRequest.init()
-//        matchRequest.defaultNumberOfPlayers = 2
-//        matchRequest.minPlayers = 2
-//        matchRequest.maxPlayers = 2
-//        
-//        let vc = GKTurnBasedMatchmakerViewController.init(matchRequest: matchRequest)
-//        vc.turnBasedMatchmakerDelegate = self
-//        self.presentViewController(vc, animated: true, completion: nil)
-//        
-//        }
-//    }
-//  }
-//  
-//  func turnBasedMatchmakerViewControllerWasCancelled(viewController: GKTurnBasedMatchmakerViewController) {
-//    print("### MM cancelled!")
-//    self.dismissViewControllerAnimated(true, completion: nil)
-//  }
-//  
-//  // Matchmaking has failed with an error
-//  func turnBasedMatchmakerViewController(viewController: GKTurnBasedMatchmakerViewController, didFailWithError error: NSError) {
-//    print("### MM failed: \(error)")
-//    self.dismissViewControllerAnimated(true, completion: nil)
-//  }
-//  
-//  // A turned-based match has been found, the game should start
-//  func turnBasedMatchmakerViewController(viewController: GKTurnBasedMatchmakerViewController, didFindMatch match: GKTurnBasedMatch) {
-//    print("### Yeah......Game starting......")
-//    self.dismissViewControllerAnimated(true, completion: nil)
-////    self.performSegueWithIdentifier("MyGameScene", sender: match)
-//  }
-//  
-//  // Called when a users chooses to quit a match and that player has the current turn.  The developer should call playerQuitInTurnWithOutcome:nextPlayer:matchData:completionHandler: on the match passing in appropriate values.  They can also update matchOutcome for other players as appropriate.
-//  func turnBasedMatchmakerViewController(viewController: GKTurnBasedMatchmakerViewController, playerQuitForMatch match: GKTurnBasedMatch) {
-//    //    println("### Quit.....match")
-//    // TODO
-//  }
-//  
-//  override func didReceiveMemoryWarning() {
-//    super.didReceiveMemoryWarning()
-//    // Dispose of any resources that can be recreated.
-//  }
-//  
-//  @IBAction func testServer(sender: AnyObject) {
-//    // Create a reference to a Firebase location
-//    // Write data to Firebase
-//    myRootRef.setValue("hello jonny")
-//    print(myRootRef)
-//  }
-//  
-//  @IBAction func writeToServer(sender: AnyObject) {
-//    // Read data and react to changes
-//    myRootRef.observeEventType(.Value, withBlock: {
-//      snapshot in
-//      print("\(snapshot.key) -> \(snapshot.value)")
-//    })
-//  }
+  @IBOutlet var password: UITextField!
+  
+  
   
   @IBAction func playGameSound(sender: AnyObject) {
    startNewGame()
@@ -141,29 +76,27 @@ class CameraViewController: UIViewController {
       completion: nil)
   }
 
-  
+  @IBAction func loginAction(sender: AnyObject) {
+    ref.authUser(email.text, password: password.text, withCompletionBlock: { (error,auth) in
+      if (error != nil) {
+        print(error)
+      }
+      if (auth != nil) {
+      self.performSegueWithIdentifier(self.loginToList, sender: nil)
+        print(auth)
+      }
+    })
   }
   
-  
-  
-//  @IBAction func login(sender: AnyObject) {
-//    ref.authUser(emailTF.text, password: passwordTF.text, withCompletionBlock: { (error, auth) in
-//    })
-//  }
-//  
-//    override func viewDidLoad() {
-//      super.viewDidLoad()
-//    }
-//  //MARK: LOGIN SEGUE
-//  override func viewDidAppear(animated: Bool) {
-//    super.viewDidAppear(animated)
-//    
-//    ref.observeAuthEventWithBlock { (authData) -> Void in
-//      if authData != nil {
-//        self.performSegueWithIdentifier(self.loginToList, sender: nil)
-//      }
-//    }
-//  }
-    
-  
+  override func viewDidAppear(animated: Bool) {
+    super.viewDidAppear(animated)
+    ref.observeAuthEventWithBlock { (authData) -> Void in
+            if authData != nil {
+              self.performSegueWithIdentifier(self.loginToList, sender: nil)
+               print(authData)
 
+      }
+    }
+  }
+  
+}
