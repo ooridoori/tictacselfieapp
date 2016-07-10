@@ -90,10 +90,13 @@ class OnlineUsersTableViewController: UITableViewController {
   
   @IBAction func createMatch(sender: AnyObject) {
     print("creating match")
-    
+  
+    print(self.rootRef)
     let authUser = self.rootRef.authData.providerData
     
-    print("authUser", authUser)
+//    print("authUser", authUser)
+    
+    print("this is self.rootRef", self.rootRef)
     
     
     let alert = UIAlertController(title: "New Match",

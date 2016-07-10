@@ -173,7 +173,7 @@ public class EGC: NSObject, GKGameCenterControllerDelegate, GKMatchmakerViewCont
             }
             Static.delegate = EGC.delegate
             
-            EGC.printLogEGC("New delegate UIViewController is \(_stdlib_getDemangledTypeName(newValue))\n")
+            EGC.printLogEGC("New delegate UIViewController is \(String(newValue))\n")
         }
     }
     

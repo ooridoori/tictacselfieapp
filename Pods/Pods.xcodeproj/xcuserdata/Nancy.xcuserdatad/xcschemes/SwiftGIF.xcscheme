@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0710"
+   LastUpgradeVersion = "0730"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "28CF070FD1FDA6D4396101988197F40C"
+               BlueprintIdentifier = "2F0EEC6883CB19E10F635DF4FF1C35A9"
                BuildableName = "SwiftGIF.framework"
                BlueprintName = "SwiftGIF"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "28CF070FD1FDA6D4396101988197F40C"
+            BlueprintIdentifier = "2F0EEC6883CB19E10F635DF4FF1C35A9"
             BuildableName = "SwiftGIF.framework"
             BlueprintName = "SwiftGIF"
             ReferencedContainer = "container:Pods.xcodeproj">

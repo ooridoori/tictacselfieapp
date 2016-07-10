@@ -79,18 +79,19 @@ class WinnersPageViewController: UIViewController {
       
       // Sets a timer for every second and calls method changeImage
       self.timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self,
-        selector: "animateImage", userInfo: nil, repeats: true)
+        selector: #selector(WinnersPageViewController.animateImage), userInfo: nil, repeats: true)
       
       // Do any additional setup after loading the view.
   }
   @IBAction func playAgain(sender: AnyObject) {
+    print(self.timer)
     blop()
     self.timer.invalidate()
 
   }
   
   func animateImage () {
-    playerImages.currentIndex++
+    playerImages.currentIndex += 1
     let imageCount:Int = winnerImages.count
     let index = playerImages.currentIndex % imageCount
     print(index)

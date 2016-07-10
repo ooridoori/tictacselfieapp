@@ -75,19 +75,47 @@ class HomeViewController: UIViewController {
       animated: true,
       completion: nil)
   }
-
-  @IBAction func loginAction(sender: AnyObject) {
-    ref.authUser(email.text, password: password.text, withCompletionBlock: { (error,auth) in
-      if (error != nil) {
-        print(error)
-      }
-      if (auth != nil) {
-      self.performSegueWithIdentifier(self.loginToList, sender: nil)
-        print(auth)
-      }
-    })
+  
+  func showErrorAlert(title: String, msg: String) {
+    let alertController = UIAlertController(title:title,message:msg,preferredStyle: .Alert)
+    let defaultAction = UIAlertAction(title: "OK", style: .Default, handler:nil)
+    alertController.addAction(defaultAction)
+    self.presentViewController(alertController,animated: true, completion: nil)
   }
   
+  @IBAction func loginAction(sender: AnyObject) {
+    if let email = email.text where email != "", let pwd = password.text where pwd != "" {
+      ref.authUser(email, password: pwd, withCompletionBlock: {
+      error,auth in
+        if error != nil {
+        print(error)
+        if let errorCode = FAuthenticationError(rawValue: error.code) {
+          switch (errorCode) {
+            case .UserDoesNotExist:
+            self.showErrorAlert("Login error",msg: "You must register!")
+          case .InvalidEmail:
+            self.showErrorAlert("Login error",msg: "Wrong Email!")
+          case .InvalidPassword:
+            self.showErrorAlert("Login error",msg: "Wrong Email!")
+          default:
+            print(error)
+          
+          }
+
+        // User is logged in
+      }
+        } else {
+          self.showErrorAlert("Alert!", msg: "You must enter a Username and Password")
+        }
+            if (auth != nil) {
+//      self.performSegueWithIdentifier(self.loginToList, sender: nil)
+        print(auth)
+        
+      }
+      
+      }
+    )}
+  }
   override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(animated)
     ref.observeAuthEventWithBlock { (authData) -> Void in
@@ -95,8 +123,7 @@ class HomeViewController: UIViewController {
               self.performSegueWithIdentifier(self.loginToList, sender: nil)
                print(authData)
 
-      }
-    }
-  }
-  
+      }}
 }
+}
+
