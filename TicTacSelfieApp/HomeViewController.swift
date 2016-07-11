@@ -22,9 +22,7 @@ class HomeViewController: UIViewController {
   
  
   @IBOutlet var email: UITextField!
-  
   @IBOutlet var password: UITextField!
-  
   
   
   @IBAction func playGameSound(sender: AnyObject) {
@@ -84,46 +82,62 @@ class HomeViewController: UIViewController {
   }
   
   @IBAction func loginAction(sender: AnyObject) {
+    if let email = email.text {
+      if email == "" {
+        self.showErrorAlert("Sign in", msg: "Please sign in.")
+      }
+      if let password = password.text {
+        if password == "" {
+          self.showErrorAlert("Sign in", msg: "Please enter your password!")
+        }
+      }
+    }
+    
+//Connecting to Firebase------------------------------
     if let email = email.text where email != "", let pwd = password.text where pwd != "" {
       ref.authUser(email, password: pwd, withCompletionBlock: {
-      error,auth in
-        if error != nil {
-        print(error)
-        if let errorCode = FAuthenticationError(rawValue: error.code) {
-          switch (errorCode) {
-            case .UserDoesNotExist:
-            self.showErrorAlert("Login error",msg: "You must register!")
-          case .InvalidEmail:
-            self.showErrorAlert("Login error",msg: "Wrong Email!")
-          case .InvalidPassword:
-            self.showErrorAlert("Login error",msg: "Wrong Email!")
-          default:
-            print(error)
-          
-          }
-
-        // User is logged in
-      }
-        } else {
-          self.showErrorAlert("Alert!", msg: "You must enter a Username and Password")
-        }
-            if (auth != nil) {
-//      self.performSegueWithIdentifier(self.loginToList, sender: nil)
-        print(auth)
+        error,auth in
         
-      }
+        if error != nil {
+          print(error)
+          if let errorCode = FAuthenticationError(rawValue: error.code) {
+            switch (errorCode) {
+              case .UserDoesNotExist:
+                self.showErrorAlert("Login error",msg: "User does not exist. Please sign up!")
+              case .InvalidEmail:
+                self.showErrorAlert("Login error",msg: "Wrong Email!")
+              case .InvalidPassword:
+                self.showErrorAlert("Login error",msg: "Wrong Password!")
+              default:
+                print(error)
+            }
+          }
+        }
+        
+        if (auth != nil) {
+          let storyboard = UIStoryboard(name: "Main", bundle: nil)
+
+          let vc = storyboard.instantiateViewControllerWithIdentifier("matchList") 
+          let navController = UINavigationController(rootViewController: vc)
+          self.presentViewController(navController, animated:true, completion: nil)
+//          print("vc = ", vc)
+//          self.navigationController!.pushViewController(vc, animated: true)
+        }
       
       }
     )}
   }
   override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(animated)
-    ref.observeAuthEventWithBlock { (authData) -> Void in
-            if authData != nil {
-              self.performSegueWithIdentifier(self.loginToList, sender: nil)
-               print(authData)
-
-      }}
-}
+    
+//    ref.observeAuthEventWithBlock { (authData) -> Void in
+//            if authData != nil {
+//              self.performSegueWithIdentifier(self.loginToList, sender: nil)
+////               print(authData)
+//
+//      }}
+    }
+  
+  
 }
 

@@ -90,7 +90,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
       button.userInteractionEnabled = false
       self.view.addSubview(button)
       
-      ++turnCounter
+      turnCounter += 1
       
       //saving the player's mark in our rowcombos array [x,o,o,x..]
       rowCombos[button.tag] = currentPlayerMark

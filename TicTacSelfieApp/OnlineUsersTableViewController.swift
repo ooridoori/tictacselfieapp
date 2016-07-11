@@ -58,7 +58,7 @@ class OnlineUsersTableViewController: UITableViewController {
       }
       
       self.tableView.reloadData()
-      print("matchitems", self.matchItems)
+//      print("matchitems", self.matchItems)
       
       }, withCancelBlock: { error in
         print(error.description)
@@ -69,7 +69,7 @@ class OnlineUsersTableViewController: UITableViewController {
   
   override func tableView(tableView: UITableView,
     numberOfRowsInSection section: Int) -> Int {
-      print("# of rows----", self.matchItems.count)
+//      print("# of rows----", self.matchItems.count)
       return self.matchItems.count
   }
   
@@ -83,7 +83,7 @@ class OnlineUsersTableViewController: UITableViewController {
       cell.textLabel?.text = gameRoom
       cell.detailTextLabel?.text = email
       
-      print("what is match=------", match.value.objectForKey("gameRoom") )
+//      print("what is match=------", match.value.objectForKey("gameRoom") )
 //      cell.textLabel?.text = match as! String
       return cell
   }
@@ -140,6 +140,9 @@ class OnlineUsersTableViewController: UITableViewController {
   }
   
   
+  @IBAction func backLogOut(sender: UIBarButtonItem) {
+    rootRef.unauth();
+  }
   
   
   

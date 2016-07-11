@@ -74,7 +74,6 @@
                                         <state key="normal" title="Login"/>
                                         <connections>
                                             <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zIY-kb-PPN"/>
-                                            <segue destination="9rA-pC-daD" kind="show" identifier="loginToList" id="bIS-iv-9PB"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p5R-Gs-AHC">
@@ -100,22 +99,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4893.5" y="-254.5"/>
+            <point key="canvasLocation" x="5003.5" y="-292.5"/>
         </scene>
-        <!--Online Users Table View Controller-->
+        <!--matchList-->
         <scene sceneID="8Qt-xA-1gv">
             <objects>
-                <tableViewController id="Q4e-r1-Wf5" customClass="OnlineUsersTableViewController" customModule="TicTacSelfieApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="matchList" title="matchList" id="Q4e-r1-Wf5" customClass="OnlineUsersTableViewController" customModule="TicTacSelfieApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="3w3-ek-2Pg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" textLabel="5t7-58-nMH" detailTextLabel="b8f-bh-cZY" style="IBUITableViewCellStyleSubtitle" id="RvU-5F-NY9" userLabel="UserCell">
-                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RvU-5F-NY9" id="yMz-ZH-gAz">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5t7-58-nMH">
@@ -145,7 +144,8 @@
                     <navigationItem key="navigationItem" id="Ns6-Eu-XVD">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="GjX-kx-Vbf">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="cwy-P9-dE4"/>
+                                <action selector="backLogOut:" destination="Q4e-r1-Wf5" id="bNL-9k-RvP"/>
+                                <segue destination="BYZ-38-t0r" kind="show" id="llM-8S-uwy"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Create a Match" id="f5y-xe-VAO">
@@ -158,7 +158,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iJm-Bj-ZMv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4959.5" y="633.5"/>
+            <point key="canvasLocation" x="4929" y="597"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="4tL-iV-feK">
@@ -172,7 +172,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GET THREE IN A ROW TO WIN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="le7-tQ-aC6">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="GET THREE IN A ROW TO WIN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="le7-tQ-aC6">
                                 <rect key="frame" x="44" y="83" width="287" height="29"/>
                                 <fontDescription key="fontDescription" name="BrandonGrotesque-Medium" family="Brandon Grotesque" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -200,7 +200,7 @@
                                     <action selector="tapButtonAction:" destination="iVd-Jw-Tpv" eventType="touchUpInside" id="FQ7-Cb-eTr"/>
                                 </connections>
                             </button>
-                            <button tag="5" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T0X-Qi-PjT">
+                            <button tag="5" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T0X-Qi-PjT">
                                 <rect key="frame" x="251" y="296" width="99" height="103"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -222,7 +222,7 @@
                                     <action selector="tapButtonAction:" destination="iVd-Jw-Tpv" eventType="touchUpInside" id="JG1-tC-vja"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ugp-fT-yFO">
+                            <button opaque="NO" tag="2" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ugp-fT-yFO">
                                 <rect key="frame" x="251" y="173" width="99" height="103"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
@@ -263,7 +263,7 @@
                                     <action selector="tapButtonAction:" destination="iVd-Jw-Tpv" eventType="touchUpInside" id="Ztu-st-lsl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xjc-lt-Elb">
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xjc-lt-Elb">
                                 <rect key="frame" x="251" y="420" width="99" height="103"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -274,7 +274,7 @@
                                     <action selector="tapButtonAction:" destination="iVd-Jw-Tpv" eventType="touchUpInside" id="pZb-ts-9PF"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="field" translatesAutoresizingMaskIntoConstraints="NO" id="Dwj-7P-4a0">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="field" translatesAutoresizingMaskIntoConstraints="NO" id="Dwj-7P-4a0">
                                 <rect key="frame" x="0.0" y="28" width="375" height="639"/>
                             </imageView>
                         </subviews>
@@ -519,8 +519,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="qhK-dY-wk8">
+                        <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
-                        <segue destination="Q4e-r1-Wf5" kind="relationship" relationship="rootViewController" id="zdf-AQ-8vg"/>
+                        <segue destination="Q4e-r1-Wf5" kind="show" identifier="matchListSegue" id="b30-zG-iJg"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P6n-KQ-78a" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -533,6 +537,6 @@
         <image name="tictaclogo" width="476" height="476"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ZTa-am-K5E"/>
+        <segue reference="llM-8S-uwy"/>
     </inferredMetricsTieBreakers>
 </document>
